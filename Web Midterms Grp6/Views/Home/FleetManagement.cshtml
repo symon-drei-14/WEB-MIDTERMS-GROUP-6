@@ -1,5 +1,134 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input, select {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background: #218838;
+            }
+
+        .calendar-container {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script>
+                function addToCalendar() {
+            let client = document.getElementById("Client").value;
+            let destination = document.getElementById("trip").value;
+            let container = document.getElementById("container").value;
+            let vehicle = document.getElementById("vehicle").value;
+            let date = document.getElementById("trip-date").value;
+
+            if (!client || !destination || !date) {
+                alert("Please fill in Client, Destination, and Trip Date.");
+                return;
+            }
+
+            let startDate = new Date(date);
+            let endDate = new Date(startDate);
+            endDate.setHours(startDate.getHours() + 2);
+
+            let startDateTime = startDate.toISOString().replace(/-|:|\.\d+/g, "");
+            let endDateTime = endDate.toISOString().replace(/-|:|\.\d+/g, "");
+
+            let eventTitle = `Trip for ${client}`;
+            let eventDetails = `Destination: ${destination}%0AContainer: ${container}%0AVehicle: ${vehicle}`;
+
+            let calendarId = "c_85307cff02b946a599ffb7bff993e5afb0e7a42e1c1d0d1f566788763f3645fe@group.calendar.google.com";  // Replace with your Google Calendar ID
+            let calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&details=${eventDetails}&dates=${startDateTime}/${endDateTime}&add=${calendarId}`;
+
+            window.open(calendarUrl, "_blank");
+
+            // Refresh the embedded calendar after adding the event
+            setTimeout(refreshCalendar, 2000);
+        }
+
+        // Function to refresh the embedded calendar
+        function refreshCalendar() {
+            let iframe = document.getElementById("calendar-frame");
+            iframe.src = iframe.src;  // Reloads the calendar
+        }
+
+    </script>
+</head>
+<body>
+    <div class="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/embed?height=800&wkst=1&ctz=Asia%2FManila&src=Y184NTMwN2NmZjAyYjk0NmE1OTlmZmI3YmZmOTkzZTVhZmIwZTdhNDJlMWMxZDBkMWY1NjY3ODg3NjNmMzY0NWZlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23A79B8E&color=%230B8043" style="border-width:0" width="1100" height="800"></iframe>
+
+        </iframe>
+    </div>
+
+    <div class="container">
+        <h2>Fleet Management System</h2>
+        <form>
+            <label for="trip">Schedule a Trip:</label>
+            <input type="text" id="Client" name="Client" placeholder="Enter Client">
+            <input type="text" id="trip" name="trip" placeholder="Enter destination">
+            <input type="text" id="container" name="container" placeholder="Enter Container No.">
+
+            <label for="vehicle">Select Vehicle:</label>
+            <select id="vehicle" name="vehicle">
+                <option value="Truck 1">Truck 1</option>
+                <option value="Truck 2">Truck 2</option>
+                <option value="Van 1">Van 1</option>
+            </select>
+
+            <label for="trip-date">Select Trip Date:</label>
+            <input type="date" id="trip-date" name="trip-date">
+
+            <button type="button" onclick="addToCalendar()">Add to Google Calendar</button>
+        </form>
+    </div>
+</body>
+</html>

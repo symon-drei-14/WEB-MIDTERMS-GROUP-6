@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/login.5k1zmd1kmh.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5k1zmd1kmh"},{"Name":"integrity","Value":"sha256-pSwN4KcA6Rdvb2pIC/uNHwb0TGUSAAN8tNfFW9bYiPc="},{"Name":"label","Value":"_content/Web Midterms Grp6/css/login.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"958"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pSwN4KcA6Rdvb2pIC/uNHwb0TGUSAAN8tNfFW9bYiPc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 12:14:41 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/login.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pSwN4KcA6Rdvb2pIC/uNHwb0TGUSAAN8tNfFW9bYiPc="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"958"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pSwN4KcA6Rdvb2pIC/uNHwb0TGUSAAN8tNfFW9bYiPc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 12:14:41 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-AyL4zmmG2QU\u002BdO5AX5PUa9ceS48BPL5xe\u002B5KrGDtH6Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3976"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022AyL4zmmG2QU\u002BdO5AX5PUa9ceS48BPL5xe\u002B5KrGDtH6Y=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 13:41:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/login.f1hjp7tp6g.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"f1hjp7tp6g"},{"Name":"integrity","Value":"sha256-AyL4zmmG2QU\u002BdO5AX5PUa9ceS48BPL5xe\u002B5KrGDtH6Y="},{"Name":"label","Value":"_content/Web Midterms Grp6/css/login.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3976"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022AyL4zmmG2QU\u002BdO5AX5PUa9ceS48BPL5xe\u002B5KrGDtH6Y=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 13:41:24 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/prevmain.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\prevmain.css'))</AssetFile>
@@ -76,13 +76,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\login.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4my9wcius0"},{"Name":"integrity","Value":"sha256-hHh\u002BkRdsobqjNV4A8fsFKUB6DCVD1myeWEaAS9qqhG0="},{"Name":"label","Value":"_content/Web Midterms Grp6/js/login.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"723"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hHh\u002BkRdsobqjNV4A8fsFKUB6DCVD1myeWEaAS9qqhG0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 12:02:37 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"723"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hHh\u002BkRdsobqjNV4A8fsFKUB6DCVD1myeWEaAS9qqhG0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 12:16:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/js/login.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\login.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hHh\u002BkRdsobqjNV4A8fsFKUB6DCVD1myeWEaAS9qqhG0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"723"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hHh\u002BkRdsobqjNV4A8fsFKUB6DCVD1myeWEaAS9qqhG0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 12:02:37 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"723"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022hHh\u002BkRdsobqjNV4A8fsFKUB6DCVD1myeWEaAS9qqhG0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 12:16:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
