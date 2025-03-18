@@ -22,7 +22,7 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=TripLogs}/{id?}")
+    pattern: "{controller=Home}/{action=Login}/{id?}")
     .WithStaticAssets();
 
 
