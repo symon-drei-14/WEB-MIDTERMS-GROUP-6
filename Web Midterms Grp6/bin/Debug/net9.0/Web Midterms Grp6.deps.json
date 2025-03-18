@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Web Midterms Grp6/1.0.0": {
+        "runtime": {
+          "Web Midterms Grp6.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Web Midterms Grp6/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

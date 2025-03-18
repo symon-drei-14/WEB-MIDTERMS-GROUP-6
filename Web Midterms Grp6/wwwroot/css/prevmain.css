@@ -1,0 +1,221 @@
+﻿body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 100%;
+    padding: 10px;
+}
+
+.responsive-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Make table full-width */
+}
+
+    .responsive-table li {
+        border-radius: 3px;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 100%; /* Ensure full width */
+    }
+
+.table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8 {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Make sure it adapts properly on smaller screens */
+@media (max-width: 767px) {
+    .table-header {
+        display: none;
+    }
+
+    .table-row {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .col {
+        flex-basis: 100%;
+        display: flex;
+        padding: 10px 0;
+    }
+
+        .col:before {
+            color: #6C7A89;
+            padding-right: 10px;
+            content: attr(data-label);
+            flex-basis: 50%;
+            text-align: right;
+            font-weight: bold;
+        }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-height: 80vh; /* Prevents modal from overflowing */
+    overflow-y: auto; /* Makes the modal scrollable */
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+    }
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    color: white;
+}
+.btn-first {
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-first:hover {
+        background-color: #218838;
+    }
+
+.btn-secondary {
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-secondary:hover {
+        background-color: #0056b3;
+    }
+
+.btn-third {
+    background-color: #fd7e14;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-third:hover {
+        background-color: #e36414;
+    }
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 15px;
+}
+
+    .pagination button {
+        padding: 8px 12px;
+        margin: 5px;
+        border: none;
+        background-color: #ddd;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+        .pagination button.active {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .pagination button:hover {
+            background-color: #bbb;
+        }
