@@ -9,178 +9,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/fleetmanagement.css" rel="stylesheet" type="text/css" />
+    <script src="/js/fleetmanagement.js" defer></script>
     <title>Fleet Management Dashboard</title>
     <style>
 
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e9ecef;
-            color: #343a40;
-        }
-
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-            header .logo {
-                font-size: 28px;
-                font-weight: bold;
-            }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-            nav ul li {
-                display: inline;
-                padding: 10px;
-            }
-
-                nav ul li a {
-                    color: white;
-                    text-decoration: none;
-                    padding: 10px;
-                }
-
-        .dashboard, section {
-            margin: 20px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2 {
-            color: #007bff;
-        }
-
-        .overview {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-
-            .overview p {
-                background-color: #f8f9fa;
-                padding: 10px;
-                border-radius: 5px;
-                height: 50px -webkit-box-shadow: 5px 3px 0px 4px rgba(192, 195, 207, 1);
-                -moz-box-shadow: 5px 3px 0px 4px rgba(192, 195, 207, 1);
-                box-shadow: 5px 3px 0px 4px rgba(192, 195, 207, 1);
-            }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-            table th, table td {
-                border: 1px solid #dee2e6;
-                padding: 12px;
-                text-align: left;
-            }
-
-            table th {
-                background-color: #51af24;
-                color: white;
-            }
-
-            table tr:nth-child(even) {
-                background-color: #f2f2f2;
-            }
-
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-            button.report-damage-btn {
-                background-color: #dc3545;
-            }
-
-            button:hover {
-                opacity: 0.8;
-            }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            margin: 10% auto;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .close-btn {
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        }
-
-            .close-btn:hover,
-            .close-btn:focus {
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
-            }
-
-        .modal form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-            .modal form label {
-                font-weight: bold;
-            }
-
-            .modal form input, .modal form select, .modal form textarea {
-                padding: 10px;
-                border-radius: 4px;
-                border: 1px solid #ced4da;
-            }
-
-            .modal form button {
-                align-self: flex-end;
-            }
 
     </style>
 </head>
 <body>
 
+    @* <header> *@
+    @*     <div class="logo">Mansar Trucking</div> *@
+    @* </header> *@
+
     <header>
         <div class="logo">Mansar Trucking</div>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PreventiveMaintenance">Preventive Maintenance Scheduling</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="TripLogs">Trip Logs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FleetManagement">Fleet Management</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <section class="dashboard">
@@ -188,8 +44,8 @@
         <h1>Fleet Management Dashboard</h1>
         <div class="overview">
             <p>Total Vehicles: 15</p>
-            <p>Active Trips: 5</p>
-            <p>Damaged Vehicles: 3</p>
+            <p>Active Trips: <span id="active-trips-count">0</span></p>
+            <p>Damaged Vehicles: <span id="damaged-vehicles-count">3</span></p>
         </div>
     </section>
 
@@ -345,51 +201,6 @@
     </div>
 
 
-    <script>
-
-        var assignModal = document.getElementById("assign-trip-modal");
-        var damageModal = document.getElementById("damage-modal");
-
-
-        var assignTripBtn = document.getElementById("assign-trip-btn");
-        var reportButtons = document.querySelectorAll('.report-damage-btn');
-
-
-        var closeAssignModal = assignModal.getElementsByClassName("close-btn")[0];
-        var closeDamageModal = damageModal.getElementsByClassName("close-btn")[0];
-
-
-        assignTripBtn.onclick = function() {
-            assignModal.style.display = "block";
-        }
-
-        // Fordaopen the Report Damage modal
-        reportButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                var vehicleName = button.getAttribute('data-vehicle');
-                document.getElementById('vehicle-name').textContent = vehicleName;
-                damageModal.style.display = "block";
-            });
-        });
-
-        // Close the modals
-        closeAssignModal.onclick = function() {
-            assignModal.style.display = "none";
-        }
-
-        closeDamageModal.onclick = function() {
-            damageModal.style.display = "none";
-        }
-
-        // Close the modal if the user clicks outside of it
-        window.onclick = function(event) {
-            if (event.target == assignModal) {
-                assignModal.style.display = "none";
-            } else if (event.target == damageModal) {
-                damageModal.style.display = "none";
-            }
-        }
-    </script>
 
 </body>
 </html>
