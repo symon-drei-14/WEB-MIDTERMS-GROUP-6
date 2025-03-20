@@ -18,6 +18,7 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\boot
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\js\login.js
+C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\js\landingpage.js
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\js\site.js
@@ -40,6 +41,7 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\boot
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\css\triplogs.css
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\js\fleetmanagement.js
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\css\landingpage.css
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
@@ -70,13 +72,16 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\jque
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
 wwwroot\css\fleetmanagement.css
+wwwroot\css\landingpage.css
 wwwroot\css\login.css
 wwwroot\css\prevmain.css
 wwwroot\css\site.css
 wwwroot\css\StyleSheet.css
 wwwroot\css\triplogs.css
 wwwroot\favicon.ico
+wwwroot\img\bggif.gif
 wwwroot\js\fleetmanagement.js
+wwwroot\js\landingpage.js
 wwwroot\js\login.js
 wwwroot\js\prevmain.js
 wwwroot\js\site.js

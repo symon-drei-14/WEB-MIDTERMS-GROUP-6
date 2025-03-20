@@ -1,11 +1,11 @@
 ﻿body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+/*    margin: 0;
+    padding: 0;*/
     background-color: #e9ecef;
     color: #343a40;
 }
-
+/*
 header {
     background-color: #007bff;
     color: white;
@@ -36,7 +36,7 @@ nav ul {
             color: white;
             text-decoration: none;
             padding: 10px;
-        }
+        }*/
 
 .dashboard, section {
     margin: 20px;

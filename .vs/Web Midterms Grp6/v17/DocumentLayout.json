@@ -3,48 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\views\\home\\landingpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\views\\home\\landingpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\views\\home\\triplogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\views\\home\\triplogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\views\\home\\fleetmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\views\\home\\fleetmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\views\\home\\preventivemaintenance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\views\\home\\preventivemaintenance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\wwwroot\\css\\fleetmanagement.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\wwwroot\\css\\fleetmanagement.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\wwwroot\\css\\prevmain.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\wwwroot\\css\\prevmain.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|c:\\users\\symon\\source\\repos\\web midterms grp6\\web midterms grp6\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{06CDAE2A-F67E-4828-9D0D-EE1CAE8243C6}|Web Midterms Grp6\\Web Midterms Grp6.csproj|solutionrelative:web midterms grp6\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,68 +26,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TripLogs.cshtml",
-              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\TripLogs.cshtml",
-              "RelativeDocumentMoniker": "Web Midterms Grp6\\Views\\Home\\TripLogs.cshtml",
-              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\TripLogs.cshtml",
-              "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\TripLogs.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-20T13:15:41.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "login.js",
-              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\login.js",
-              "RelativeDocumentMoniker": "Web Midterms Grp6\\wwwroot\\js\\login.js",
-              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\login.js",
-              "RelativeToolTip": "Web Midterms Grp6\\wwwroot\\js\\login.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-20T13:14:59.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Web Midterms Grp6\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Web Midterms Grp6\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:14:25.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Web Midterms Grp6\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "Web Midterms Grp6\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-20T13:14:22.323Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LandingPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
-              "RelativeDocumentMoniker": "Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
-              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
-              "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-20T13:14:10.632Z",
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "Web Midterms Grp6\\wwwroot\\css\\login.css",
+              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "Web Midterms Grp6\\wwwroot\\css\\login.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-20T15:41:58.144Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -126,69 +50,36 @@
               "RelativeDocumentMoniker": "Web Midterms Grp6\\Views\\Home\\Login.cshtml",
               "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\Login.cshtml",
               "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwBMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-20T08:59:35.998Z"
+              "WhenOpened": "2025-03-20T15:34:54.961Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "fleetmanagement.css",
-              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\fleetmanagement.css",
-              "RelativeDocumentMoniker": "Web Midterms Grp6\\wwwroot\\css\\fleetmanagement.css",
-              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\fleetmanagement.css",
-              "RelativeToolTip": "Web Midterms Grp6\\wwwroot\\css\\fleetmanagement.css",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAYwKIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-20T08:55:04.493Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FleetManagement.cshtml",
-              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\FleetManagement.cshtml",
-              "RelativeDocumentMoniker": "Web Midterms Grp6\\Views\\Home\\FleetManagement.cshtml",
-              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\FleetManagement.cshtml",
-              "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\FleetManagement.cshtml",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAM0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-20T08:52:29.09Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Program.cs",
-              "RelativeDocumentMoniker": "Web Midterms Grp6\\Program.cs",
-              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Program.cs",
-              "RelativeToolTip": "Web Midterms Grp6\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:48:16.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "PreventiveMaintenance.cshtml",
               "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\PreventiveMaintenance.cshtml",
               "RelativeDocumentMoniker": "Web Midterms Grp6\\Views\\Home\\PreventiveMaintenance.cshtml",
               "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\PreventiveMaintenance.cshtml",
               "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\PreventiveMaintenance.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-12T02:59:00.575Z"
+              "WhenOpened": "2025-03-20T15:45:52.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "prevmain.css",
-              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\prevmain.css",
-              "RelativeDocumentMoniker": "Web Midterms Grp6\\wwwroot\\css\\prevmain.css",
-              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\prevmain.css",
-              "RelativeToolTip": "Web Midterms Grp6\\wwwroot\\css\\prevmain.css",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-12T02:59:21.597Z"
+              "DocumentIndex": 3,
+              "Title": "login.js",
+              "DocumentMoniker": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\login.js",
+              "RelativeDocumentMoniker": "Web Midterms Grp6\\wwwroot\\js\\login.js",
+              "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\login.js",
+              "RelativeToolTip": "Web Midterms Grp6\\wwwroot\\js\\login.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-20T13:14:59.434Z",
+              "EditorCaption": ""
             }
           ]
         }

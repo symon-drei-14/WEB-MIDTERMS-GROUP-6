@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\fleetmanagement.css"
     },
     {
+      "Id": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\landingpage.css",
+      "PackagePath": "staticwebassets\\css\\landingpage.css"
+    },
+    {
       "Id": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },
@@ -33,8 +37,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\img\\bggif.gif",
+      "PackagePath": "staticwebassets\\img\\bggif.gif"
+    },
+    {
       "Id": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\fleetmanagement.js",
       "PackagePath": "staticwebassets\\js\\fleetmanagement.js"
+    },
+    {
+      "Id": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\landingpage.js",
+      "PackagePath": "staticwebassets\\js\\landingpage.js"
     },
     {
       "Id": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\login.js",

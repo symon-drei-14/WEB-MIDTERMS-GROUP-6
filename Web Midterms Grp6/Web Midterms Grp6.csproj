@@ -7,4 +7,8 @@
     <RootNamespace>Web_Midterms_Grp6</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
 </Project>
