@@ -18,29 +18,10 @@
 </head>
 <body>
 
-    @* <header> *@
-    @*     <div class="logo">Mansar Trucking</div> *@
-    @* </header> *@
-
-    @* <header> *@
-    @*     <div class="logo">Mansar Trucking</div> *@
-    @*     <nav> *@
-    @*         <ul class="nav-links"> *@
-    @*             <li class="nav-item"> *@
-    @*                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PreventiveMaintenance">Preventive Maintenance Scheduling</a> *@
-    @*             </li> *@
-    @*             <li class="nav-item"> *@
-    @*                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="TripLogs">Trip Logs</a> *@
-    @*             </li> *@
-    @*             <li class="nav-item"> *@
-    @*                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FleetManagement">Fleet Management</a> *@
-    @*             </li> *@
-    @*         </ul> *@
-    @*     </nav> *@
-    @* </header> *@
+    
 
     <section class="dashboard">
-        <button><a href="#" id="assign-trip-btn" style="color: white; text-decoration: none;">Assign Trip</a></button>
+        <button id="trip-assign-button"><a href="#" style="color: white; text-decoration: none;">Assign Trip</a></button>
         <h1>Fleet Management Dashboard</h1>
         <div class="overview">
             <p>Total Vehicles: 15</p>
@@ -112,7 +93,7 @@
                     <td>March 19, 2025</td>
                     <td>Location A</td>
                     <td>Completed</td>
-                    <td><button class="report-damage-btn" data-vehicle="Vehicle 1">Report Damage</button></td>
+                    <td><button class="damage-report-button" data-vehicle="Vehicle 1">Report Damage</button></td>
                 </tr>
                 <tr>
                     <td>Vehicle 2</td>
@@ -120,7 +101,7 @@
                     <td>None</td>
                     <td>Location B</td>
                     <td>Completed</td>
-                    <td><button class="report-damage-btn" data-vehicle="Vehicle 2">Report Damage</button></td>
+                    <td><button class="damage-report-button" data-vehicle="Vehicle 2">Report Damage</button></td>
                 </tr>
             </tbody>
         </table>

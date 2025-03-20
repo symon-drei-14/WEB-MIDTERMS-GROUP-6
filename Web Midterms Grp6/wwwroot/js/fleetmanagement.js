@@ -1,7 +1,7 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
     // Assign Trip Modal
     var assignModal = document.getElementById("assign-trip-modal");
-    var assignTripBtn = document.getElementById("assign-trip-btn");
+    var assignTripBtn = document.getElementById("trip-assign-button");
     var closeAssignModal = assignModal.querySelector(".close-btn");
     var assignForm = assignModal.querySelector("form");
     var tableBody = document.querySelector("#assigned-trips tbody");
@@ -19,15 +19,6 @@
     // Close Assign Trip Modal
     closeAssignModal.onclick = function () {
         assignModal.style.display = "none";
-    };
-
-    // Close modal if clicked outside
-    window.onclick = function (event) {
-        if (event.target == assignModal) {
-            assignModal.style.display = "none";
-        } else if (event.target == damageModal) {
-            damageModal.style.display = "none";
-        }
     };
 
     // Handle Assign Trip form submission
@@ -57,7 +48,7 @@
         `;
 
         tableBody.appendChild(newRow);
-        updateActiveTripsCount(); // Update Active Trips count
+        updateActiveTripsCount();
 
         assignModal.style.display = "none";
         assignForm.reset();
@@ -65,7 +56,7 @@
 
     // Report Damage Modal
     var damageModal = document.getElementById("damage-modal");
-    var reportButtons = document.querySelectorAll(".report-damage-btn");
+    var reportButtons = document.querySelectorAll(".damage-report-button");
     var closeDamageModal = damageModal.querySelector(".close-btn");
     var damageForm = damageModal.querySelector("form");
     var damageTableBody = document.querySelector("#reported-damages tbody");
@@ -109,7 +100,7 @@
             `;
 
             damageTableBody.appendChild(newRow);
-            updateDamagedVehiclesCount(); // Update Damaged Vehicles count
+            updateDamagedVehiclesCount();
 
             alert("Damage Report Sent!");
 
@@ -119,6 +110,16 @@
             alert("Please fill in all fields before submitting.");
         }
     });
+
+    // Close modal if clicked outside (only if event.target is an open modal)
+    window.onclick = function (event) {
+        if (event.target === assignModal) {
+            assignModal.style.display = "none";
+        }
+        if (damageModal && event.target === damageModal) {
+            damageModal.style.display = "none";
+        }
+    };
 
     // Initialize counts on page load
     updateActiveTripsCount();
