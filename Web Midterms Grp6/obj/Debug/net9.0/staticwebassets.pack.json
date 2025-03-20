@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\StyleSheet.css"
     },
     {
+      "Id": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\fleetmanagement.css",
+      "PackagePath": "staticwebassets\\css\\fleetmanagement.css"
+    },
+    {
       "Id": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },

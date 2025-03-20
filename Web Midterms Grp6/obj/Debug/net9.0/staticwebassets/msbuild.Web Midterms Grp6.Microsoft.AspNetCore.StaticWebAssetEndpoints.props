@@ -1,5 +1,17 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/fleetmanagement.82m2o51by1.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\fleetmanagement.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"82m2o51by1"},{"Name":"integrity","Value":"sha256-0AegJJ9\u002B\u002BDa3nWIVMcVBOuop9Ws\u002BndHTVrlf55xblN4="},{"Name":"label","Value":"_content/Web Midterms Grp6/css/fleetmanagement.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3095"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00220AegJJ9\u002B\u002BDa3nWIVMcVBOuop9Ws\u002BndHTVrlf55xblN4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Mar 2025 08:56:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/fleetmanagement.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\fleetmanagement.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0AegJJ9\u002B\u002BDa3nWIVMcVBOuop9Ws\u002BndHTVrlf55xblN4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3095"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00220AegJJ9\u002B\u002BDa3nWIVMcVBOuop9Ws\u002BndHTVrlf55xblN4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Mar 2025 08:56:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/login.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -12,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"f1hjp7tp6g"},{"Name":"integrity","Value":"sha256-AyL4zmmG2QU\u002BdO5AX5PUa9ceS48BPL5xe\u002B5KrGDtH6Y="},{"Name":"label","Value":"_content/Web Midterms Grp6/css/login.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3976"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022AyL4zmmG2QU\u002BdO5AX5PUa9ceS48BPL5xe\u002B5KrGDtH6Y=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 13:41:24 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/prevmain.5hdx9qvp4x.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\prevmain.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5hdx9qvp4x"},{"Name":"integrity","Value":"sha256-h7yNXQeJP2GGYqnNTFtX4Hmm2wlmqNIdH0bFeme/EpM="},{"Name":"label","Value":"_content/Web Midterms Grp6/css/prevmain.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4175"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022h7yNXQeJP2GGYqnNTFtX4Hmm2wlmqNIdH0bFeme/EpM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 15:17:27 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/prevmain.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\prevmain.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-h7yNXQeJP2GGYqnNTFtX4Hmm2wlmqNIdH0bFeme/EpM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4175"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022h7yNXQeJP2GGYqnNTFtX4Hmm2wlmqNIdH0bFeme/EpM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 15:17:27 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-rgcKdyoTwNDoPHGcbWGQemXrJgHfz3FGu/gMiS7SY60="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4199"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022rgcKdyoTwNDoPHGcbWGQemXrJgHfz3FGu/gMiS7SY60=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 15:20:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/prevmain.iwo9uxp6p6.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\prevmain.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"iwo9uxp6p6"},{"Name":"integrity","Value":"sha256-rgcKdyoTwNDoPHGcbWGQemXrJgHfz3FGu/gMiS7SY60="},{"Name":"label","Value":"_content/Web Midterms Grp6/css/prevmain.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4199"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022rgcKdyoTwNDoPHGcbWGQemXrJgHfz3FGu/gMiS7SY60=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 15:20:17 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/site.b9sayid5wm.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>

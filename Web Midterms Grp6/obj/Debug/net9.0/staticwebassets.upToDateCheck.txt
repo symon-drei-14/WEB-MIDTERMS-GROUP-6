@@ -47,6 +47,7 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\boot
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\jquery\dist\jquery.slim.js
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\css\fleetmanagement.css
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
@@ -66,6 +67,7 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\jque
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\jquery\dist\jquery.js
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\css\fleetmanagement.css
 wwwroot\css\login.css
 wwwroot\css\prevmain.css
 wwwroot\css\site.css
