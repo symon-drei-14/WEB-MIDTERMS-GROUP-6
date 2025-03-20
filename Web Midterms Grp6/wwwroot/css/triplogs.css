@@ -1,64 +1,76 @@
 ﻿﻿body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 20px;
-    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-h2 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-}
-
-.table {
-    width: max-content;
+.container {
     max-width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-    min-width: 150px;
-    white-space: nowrap;
-    margin: 4px;
+    padding: 10px;
 }
-
-    .table thead {
-        background-color: #007bff;
-        color: #fff;
-        text-align: left;
-    }
-
-    .table th, .table td {
-        padding: 12px;
-        border: 1px solid #ddd;
-    }
-
-    .table tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    .table tr:hover {
-        background-color: #e9ecef;
-    }
 
 .btn-primary {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
+    margin-bottom: 15px; 
 }
 
-    .btn-primary:hover {
-        background-color: #0056b3;
+.responsive-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+.table-header, .table-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.table-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+}
+
+
+.col {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    word-wrap: break-word; 
+    white-space: normal; 
+}
+
+
+@media (max-width: 767px) {
+    .table-header {
+        display: none;
     }
+
+    .table-row {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .col {
+        flex-basis: 100%;
+        display: flex;
+        padding: 10px 0;
+    }
+
+        .col:before {
+            color: #6C7A89;
+            padding-right: 10px;
+            content: attr(data-label);
+            flex-basis: 50%;
+            text-align: right;
+            font-weight: bold;
+        }
+}
