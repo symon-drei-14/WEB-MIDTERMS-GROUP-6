@@ -8,7 +8,7 @@
 
         if (username === "admin" && password === "password") {
             // Redirect to the PreventiveMaintenance action in HomeController
-            window.location.href = "/Home/PreventiveMaintenance";
+            window.location.href = "/Home/LandingPage";
         } else {
             errorMessage.textContent = "Invalid username or password.";
         }
