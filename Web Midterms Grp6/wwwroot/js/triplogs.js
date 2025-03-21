@@ -1,140 +1,160 @@
-﻿$(document).ready(function () {
-    let editRow = null;
-    let rowsPerPage = 5;
-    let currentPage = 1;
+﻿let currentPage = 1;
+const rowsPerPage = 5;
+let tableData = [];
+let editingIndex = -1; 
 
-    function calculateTotal() {
-        let cashAdvance = parseFloat($("#CashAdvance").val()) || 0;
-        let additionalCashAdvance = parseFloat($("#AdditionalCashAdvance").val()) || 0;
-        let diesel = parseFloat($("#Diesel").val()) || 0;
-        let total = cashAdvance + additionalCashAdvance + diesel;
-        $("#TotalAmount").val(total.toFixed(2));
+function openModal() {
+    resetModal(); 
+    document.getElementById("addModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("addModal").style.display = "none";
+    editingIndex = -1; 
+}
+
+function resetModal() {
+    document.getElementById("tripDate").value = "";
+    document.getElementById("driver").value = "";
+    document.getElementById("broker").value = "";
+    document.getElementById("destination").value = "";
+    document.getElementById("containerNo").value = "";
+    document.getElementById("blRefNo").value = "";
+    document.getElementById("status").value = "";
+    document.getElementById("cashAdvance").value = "";
+    document.getElementById("additionalCashAdvance").value = "";
+    document.getElementById("totalAmount").value = ""; 
+}
+
+
+function calculateTotalAmount() {
+    let cashAdvance = parseFloat(document.getElementById("cashAdvance").value) || 0;
+    let additionalCashAdvance = parseFloat(document.getElementById("additionalCashAdvance").value) || 0;
+    document.getElementById("totalAmount").value = cashAdvance + additionalCashAdvance;
+}
+
+
+document.getElementById("cashAdvance").addEventListener("input", calculateTotalAmount);
+document.getElementById("additionalCashAdvance").addEventListener("input", calculateTotalAmount);
+
+function submitForm() {
+    let tripLogId = document.getElementById("tripLogId").value; 
+    let tripDate = document.getElementById("tripDate").value.trim();
+    let driver = document.getElementById("driver").value.trim();
+    let broker = document.getElementById("broker").value.trim();
+    let destination = document.getElementById("destination").value.trim();
+    let containerNo = document.getElementById("containerNo").value.trim();
+    let blRefNo = document.getElementById("blRefNo").value.trim();
+    let status = document.getElementById("status").value.trim();
+    let cashAdvance = parseFloat(document.getElementById("cashAdvance").value) || 0;
+    let additionalCashAdvance = parseFloat(document.getElementById("additionalCashAdvance").value) || 0;
+    let totalAmount = cashAdvance + additionalCashAdvance;
+
+    if (!tripDate || !driver || !broker || !destination || !containerNo || !blRefNo || !status) {
+        alert("Please fill in all required fields.");
+        return;
     }
 
-    $("#CashAdvance, #AdditionalCashAdvance, #Diesel").on("input", calculateTotal);
+    let tripData = {
+        TripLogId: tripLogId ? parseInt(tripLogId) : null, 
+        Date: tripDate,
+        Driver: driver,
+        BrokerClient: broker,
+        Destination: destination,
+        ContainerNo: containerNo,
+        BLRefNo: blRefNo,
+        Status: status,
+        CashAdvance: cashAdvance,
+        AdditionalCashAdvance: additionalCashAdvance,
+        TotalAmount: totalAmount
+    };
 
-    function updatePagination() {
-        let totalRows = $("#tripLogTable tbody tr").length;
-        let totalPages = Math.ceil(totalRows / rowsPerPage);
-        let paginationHtml = "";
+    fetch(`/TripLogs/${tripLogId ? 'Edit' : 'Add'}`, { 
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(tripData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(tripLogId ? "Trip Log Updated!" : "Trip Log Added!");
+        location.reload(); 
+    })
+    .catch(error => console.error("Error submitting trip log:", error));
 
-        for (let i = 1; i <= totalPages; i++) {
-            paginationHtml += `<li class="page-item ${i === currentPage ? 'active' : ''}">
-                <a class="page-link" href="#" data-page="${i}">${i}</a></li>`;
-        }
+    closeModal();
+}
 
-        $(".pagination").html(paginationHtml);
-        showPage(currentPage);
-    }
 
-    function showPage(page) {
-        let rows = $("#tripLogTable tbody tr");
-        rows.hide();
-        let start = (page - 1) * rowsPerPage;
-        let end = start + rowsPerPage;
-        rows.slice(start, end).show();
-    }
 
-    $(document).on("click", "#saveTripLog", function () {
-        if (editRow) {
-            // Directly update the existing row instead of replacing it
-            $(editRow).find("td:eq(0)").text($("#Date").val());
-            $(editRow).find("td:eq(1)").text($("#Driver").val());
-            $(editRow).find("td:eq(2)").text($("#Helper").val());
-            $(editRow).find("td:eq(3)").text($("#BrokerClient").val());
-            $(editRow).find("td:eq(4)").text($("#Consignee").val());
-            $(editRow).find("td:eq(5)").text($("#Destination").val());
-            $(editRow).find("td:eq(6)").text($("#ContainerNo").val());
-            $(editRow).find("td:eq(7)").text($("#ContainerSize").val());
-            $(editRow).find("td:eq(8)").text($("#ShippingLine").val());
-            $(editRow).find("td:eq(9)").text($("#BLRefNo").val());
-            $(editRow).find("td:eq(10)").text($("#Status").val());
-            $(editRow).find("td:eq(11)").text($("#Dispatcher").val());
-            $(editRow).find("td:eq(12)").text($("#CashAdvance").val());
-            $(editRow).find("td:eq(13)").text($("#AdditionalCashAdvance").val());
-            $(editRow).find("td:eq(14)").text($("#Diesel").val());
-            $(editRow).find("td:eq(15)").text($("#TotalAmount").val());
-            $(editRow).find("td:eq(16)").text($("#FCL").val());
+function updateTable() {
+    let table = document.getElementById("tripLogTable");
 
-            editRow = null; // Reset editRow
-        } else {
-            let newRow = `
-            <tr>
-                <td>${$("#Date").val()}</td>
-                <td>${$("#Driver").val()}</td>
-                <td>${$("#Helper").val()}</td>
-                <td>${$("#BrokerClient").val()}</td>
-                <td>${$("#Consignee").val()}</td>
-                <td>${$("#Destination").val()}</td>
-                <td>${$("#ContainerNo").val()}</td>
-                <td>${$("#ContainerSize").val()}</td>
-                <td>${$("#ShippingLine").val()}</td>
-                <td>${$("#BLRefNo").val()}</td>
-                <td>${$("#Status").val()}</td>
-                <td>${$("#Dispatcher").val()}</td>
-                <td>${$("#CashAdvance").val()}</td>
-                <td>${$("#AdditionalCashAdvance").val()}</td>
-                <td>${$("#Diesel").val()}</td>
-                <td>${$("#TotalAmount").val()}</td>
-                <td>${$("#FCL").val()}</td>
-                <td>
-                    <button class="btn btn-warning btn-sm edit-row">Edit</button>
-                    <button class="btn btn-danger btn-sm delete-row">Delete</button>
-                </td>
-            </tr>`;
+    table.innerHTML = `
+        <li class="table-header">
+            <div class="col col-1">Date</div>
+            <div class="col col-3">Driver</div>
+            <div class="col col-4">Broker/Client</div>
+            <div class="col col-5">Destination</div>
+            <div class="col col-6">Container No.</div>
+            <div class="col col-7">BL REF NO.</div>
+            <div class="col col-8">Status</div>
+            <div class="col col-8">Cash Advance</div>
+            <div class="col col-8">Additional Cash Advance</div>
+            <div class="col col-8">Total Amount</div>
+            <div class="col col-8">Actions</div>
+        </li>`;
 
-            $("#tripLogTable tbody").append(newRow);
-        }
-
-        $("#addTripLogModal").modal("hide");
-        $("body").removeClass("modal-open");
-        $(".modal-backdrop").remove();
-        $("#tripLogForm")[0].reset();
-
-        updatePagination();
-   
+    tableData.forEach((item, index) => {
+        let row = document.createElement("li");
+        row.className = "table-row";
+        row.innerHTML = `
+            <div class="col col-1">${item.tripDate}</div>
+            <div class="col col-3">${item.driver}</div>
+            <div class="col col-4">${item.broker}</div>
+            <div class="col col-5">${item.destination}</div>
+            <div class="col col-6">${item.containerNo}</div>
+            <div class="col col-7">${item.blRefNo}</div>
+            <div class="col col-8">${item.status}</div>
+            <div class="col col-8">Php ${item.cashAdvance.toFixed(2)}</div>
+            <div class="col col-8">Php ${item.additionalCashAdvance.toFixed(2)}</div>
+            <div class="col col-8">Php ${item.totalAmount.toFixed(2)}</div>
+            <div class="col col-8 actions">
+                <button class="btn btn-warning" onclick="editEntry(${index})">Edit</button>
+                <button class="btn btn-danger" onclick="deleteEntry(${index})">Delete</button>
+            </div>
+        `;
+        table.appendChild(row);
     });
 
-    $(document).on("click", ".delete-row", function () {
-        $(this).closest("tr").remove();
-        updatePagination();
-    });
+    document.getElementById("pageNumber").innerText = `Page ${currentPage}`;
+    document.getElementById("prevBtn").disabled = currentPage === 1;
+    document.getElementById("nextBtn").disabled = currentPage * rowsPerPage >= tableData.length;
+}
 
-    $(document).on("click", ".edit-row", function () {
-        editRow = $(this).closest("tr");
+function openEditModal(tripId) {
 
-        $("#Date").val($(editRow).find("td:eq(0)").text());
-        $("#Driver").val($(editRow).find("td:eq(1)").text());
-        $("#Helper").val($(editRow).find("td:eq(2)").text());
-        $("#BrokerClient").val($(editRow).find("td:eq(3)").text());
-        $("#Consignee").val($(editRow).find("td:eq(4)").text());
-        $("#Destination").val($(editRow).find("td:eq(5)").text());
-        $("#ContainerNo").val($(editRow).find("td:eq(6)").text());
-        $("#ContainerSize").val($(editRow).find("td:eq(7)").text());
-        $("#ShippingLine").val($(editRow).find("td:eq(8)").text());
-        $("#BLRefNo").val($(editRow).find("td:eq(9)").text());
-        $("#Status").val($(editRow).find("td:eq(10)").text());
-        $("#Dispatcher").val($(editRow).find("td:eq(11)").text());
-        $("#CashAdvance").val($(editRow).find("td:eq(12)").text());
-        $("#AdditionalCashAdvance").val($(editRow).find("td:eq(13)").text());
-        $("#Diesel").val($(editRow).find("td:eq(14)").text());
-        $("#TotalAmount").val($(editRow).find("td:eq(15)").text());
-        $("#FCL").val($(editRow).find("td:eq(16)").text());
+    fetch(`/TripLogs/GetTrip?id=${tripId}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("editTripLogId").value = data.tripLogId;
+            document.getElementById("editDate").value = data.date.split('T')[0];
+            document.getElementById("editDriver").value = data.driver;
+            document.getElementById("editBrokerClient").value = data.brokerClient;
+            document.getElementById("editDestination").value = data.destination;
+            document.getElementById("editContainerNo").value = data.containerNo;
+            document.getElementById("editBLRefNo").value = data.blRefNo;
+            document.getElementById("editStatus").value = data.status;
+            document.getElementById("editCashAdvance").value = data.cashAdvance;
+            document.getElementById("editAdditionalCashAdvance").value = data.additionalCashAdvance;
+            document.getElementById("editTotalAmount").value = data.cashAdvance + data.additionalCashAdvance;
 
-        $("#addTripLogModal").modal("show");
-    });
+            document.getElementById("editModal").style.display = "flex";
+        })
+        .catch(error => console.error("Error loading trip log:", error));
+}
 
-    $(document).on("click", ".pagination .page-link", function (e) {
-        e.preventDefault();
-        currentPage = parseInt($(this).attr("data-page"));
-        showPage(currentPage);
-        updatePagination();
-    });
+function closeEditModal() {
+    document.getElementById("editModal").style.display = "none";
+}
 
-    $("#addTripLogModal").on("hidden.bs.modal", function () {
-        $("#tripLogForm")[0].reset();
-        editRow = null;
-    });
-
-    updatePagination();
-});
+updateTable();
