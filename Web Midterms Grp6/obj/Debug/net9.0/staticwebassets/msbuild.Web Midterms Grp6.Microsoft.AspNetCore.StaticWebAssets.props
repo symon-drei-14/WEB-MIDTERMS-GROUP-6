@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>86fv574tgk</Fingerprint>
-      <Integrity>cIB10z0mtqOUFDJANjO3CsPp7xK/H9ZFGtMh6o7DNuQ=</Integrity>
+      <Fingerprint>13nwee18wi</Fingerprint>
+      <Integrity>3RLcQG7INcVh3TEXbddJLakGPhj/AvgyJj5ELsBfB5U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\fleetmanagement.css'))</OriginalItemSpec>

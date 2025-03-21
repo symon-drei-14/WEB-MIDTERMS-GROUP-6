@@ -103,7 +103,7 @@ button {
     button:hover {
         opacity: 0.8;
     }
-.modal {
+/*.modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -132,7 +132,7 @@ button {
     max-height: 70vh;
     overflow-y: auto;
 }
-}
+
 
 .modal-content {
     background-color: white;
@@ -142,7 +142,7 @@ button {
     max-width: 500px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 .close-btn {
     color: #aaa;
@@ -159,6 +159,57 @@ button {
         text-decoration: none;
         cursor: pointer;
     }
+
+/*.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+} */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*.modal-content {
+    background-color: white;
+    padding: 20px;
+    margin: 10% auto;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}*/
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    margin: 5% auto; /* Reduce margin to prevent clipping */
+    width: 80%;
+    max-width: 500px;
+    max-height: 80vh; /* Limit height to fit within viewport */
+    overflow-y: auto; /* Enable internal scrolling */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
 
 .modal form {
     display: flex;
