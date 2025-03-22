@@ -9,6 +9,7 @@
         const password = document.getElementById("password").value.trim();
         const errorMessage = document.getElementById("error-message");
 
+        // Client-side validation
         if (username.length === 0) {
             errorMessage.textContent = "Username is required.";
             return;
@@ -25,10 +26,32 @@
             return;
         }
 
-        if (username === "admin" && password === "password") {
-            window.location.href = "/Home/LandingPage";
-        } else {
-            errorMessage.textContent = "Invalid username or password.";
-        }
+        // Get the anti-forgery token
+        const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+        // Send data to server for validation
+        fetch('/Login/Validate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': token
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = data.redirectUrl;
+                } else {
+                    errorMessage.textContent = data.message;
+                }
+            })
+            .catch(error => {
+                errorMessage.textContent = "An error occurred. Please try again.";
+                console.error('Error:', error);
+            });
     });
 });
