@@ -1,23 +1,17 @@
-﻿@{
+﻿@model IEnumerable<Web_Midterms_Grp6.Models.MaintenanceRecord>
+@{
     ViewData["Title"] = "Preventive Maintenance Scheduling";
 }
 
 <!DOCTYPE html>
 <html>
 <head>
-
     <meta name="viewport" content="width=device-width" />
     <link href="/css/prevmain.css" rel="stylesheet" type="text/css" />
-    <script src="/js/prevmain.js" defer></script>
-    <title>Sample #1</title>
-
+    <title>Preventive Maintenance Scheduling</title>
 </head>
 
-
 <body>
-
-    
-
     <section class="dashboard">
         <div class="container">
             <h2>Preventive Maintenance Scheduling</h2>
@@ -36,16 +30,28 @@
                     <div class="col col-7">Supplier</div>
                     <div class="col col-8">Cost</div>
                 </li>
-                <li class="table-row">
-                    <div class="col col-1" data-label="Maintenance ID">1001</div>
-                    <div class="col col-2" data-label="Truck ID">T-001</div>
-                    <div class="col col-3" data-label="License Plate">ABC-1234</div>
-                    <div class="col col-4" data-label="Date of Inspection">2025-03-16</div>
-                    <div class="col col-5" data-label="Remarks">Oil Change</div>
-                    <div class="col col-6" data-label="Status">Completed</div>
-                    <div class="col col-7" data-label="Supplier">Supplier A</div>
-                    <div class="col col-8" data-label="Cost">Php200</div>
-                </li>
+                @if (Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <li class="table-row">
+                            <div class="col col-1" data-label="Maintenance ID">@item.MaintenanceId</div>
+                            <div class="col col-2" data-label="Truck ID">@item.TruckId</div>
+                            <div class="col col-3" data-label="License Plate">@item.LicensePlate</div>
+                            <div class="col col-4" data-label="Date of Inspection">@item.DateOfInspection.ToString("yyyy-MM-dd")</div>
+                            <div class="col col-5" data-label="Remarks">@item.Remarks</div>
+                            <div class="col col-6" data-label="Status">@item.Status</div>
+                            <div class="col col-7" data-label="Supplier">@item.Supplier</div>
+                            <div class="col col-8" data-label="Cost">Php@(item.Cost)</div>
+                        </li>
+                    }
+                }
+                else
+                {
+                    <li class="table-row">
+                        <div class="col col-1" colspan="8">No maintenance records found.</div>
+                    </li>
+                }
             </ul>
             <div class="pagination">
                 <button onclick="prevPage()" id="prevBtn" disabled>Previous</button>
@@ -55,8 +61,7 @@
         </div>
     </section>
 
-
-    <!-- Modal -->
+    <!-- Add Modal -->
     <div id="addModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -64,11 +69,11 @@
 
             <div class="form-group">
                 <label for="maintenanceId">Maintenance ID:</label>
-                <input type="text" id="maintenanceId">
+                <input type="text" id="maintenanceId" value="@ViewBag.NextId" readonly>
             </div>
             <div class="form-group">
                 <label for="truckId">Truck ID:</label>
-                <input type="text" id="truckId">
+                <input type="text" id="truckId" value="T-">
             </div>
             <div class="form-group">
                 <label for="licensePlate">License Plate:</label>
@@ -102,6 +107,7 @@
         </div>
     </div>
 
+    <!-- History Modal -->
     <div id="historyModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeHistoryModal()">&times;</span>
@@ -109,11 +115,16 @@
             <label for="historyTruckId">Select Truck ID:</label>
             <select id="historyTruckId" onchange="showHistory()">
                 <option value="">-- Select --</option>
+                @foreach (var truckId in ViewBag.TruckIds)
+                {
+                    <option value="@truckId">@truckId</option>
+                }
             </select>
             <ul id="historyList" class="responsive-table"></ul>
         </div>
     </div>
 
+    <!-- Reminder Modal -->
     <div id="reminderModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeReminderModal()">&times;</span>
@@ -122,8 +133,17 @@
         </div>
     </div>
 
-   
-
-
+    @section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            // CSRF protection setup for Ajax
+            $.ajaxSetup({
+                headers: {
+                    "RequestVerificationToken": $('input:hidden[name="__RequestVerificationToken"]').val()
+                }
+            });
+        </script>
+        <script src="~/js/prevmain.js"></script>
+    }
 </body>
 </html>

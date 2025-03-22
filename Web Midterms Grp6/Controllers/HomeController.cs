@@ -36,7 +36,7 @@ public class HomeController : Controller
 
     public IActionResult PreventiveMaintenance()
     {
-        return View();
+        return RedirectToAction("Index", "PreventiveMaintenance");
     }
 
     public IActionResult LandingPage()
