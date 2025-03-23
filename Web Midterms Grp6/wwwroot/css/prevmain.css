@@ -7,7 +7,15 @@
 
 .container {
     max-width: 100%;
+    height: auto; /* Don't restrict height */
+    min-height: 825px;
     padding: 10px;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 20px;
 }
 
 .responsive-table {
@@ -82,23 +90,23 @@
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 1100; /* Higher than header/sidebar */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    justify-content: center;
-    align-items: center;
+    overflow: auto;
 }
 
 .modal-content {
     background-color: #fefefe;
+    margin: 10% auto; /* Center vertically with space from top */
     padding: 20px;
     border-radius: 5px;
     width: 50%;
-    max-height: 80vh; /* Prevents modal from overflowing */
-    overflow-y: auto; /* Makes the modal scrollable */
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .close {
@@ -134,6 +142,7 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    flex: 1; /* Make buttons take equal width */
     margin-bottom: 10px;
 }
 

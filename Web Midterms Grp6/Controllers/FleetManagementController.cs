@@ -43,10 +43,14 @@ namespace Web_Midterms_Grp6.Controllers
         // GET: FleetManagement
         public IActionResult Index()
         {
-            // Return the FleetManagement view with the assigned trips data
-            return View("FleetManagement", _assignedTrips);
-        }
+            // Debug: Check if data exists
+            Console.WriteLine($"Index method called. Trip count: {_assignedTrips.Count}");
 
+            // Return the FleetManagement view with the assigned trips data
+            //return View("FleetManagement", _assignedTrips);
+            return View("FleetManagement", _assignedTrips ?? new List<AssignTrip>());
+        }
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AssignTrip(AssignTrip model)
@@ -56,8 +60,14 @@ namespace Web_Midterms_Grp6.Controllers
                 // Set Id to the next available Id
                 model.Id = _assignedTrips.Count > 0 ? _assignedTrips.Max(t => t.Id) + 1 : 1;
 
+                // Log before adding to list
+                Console.WriteLine($"Adding trip with Id: {model.Id}, Vehicle: {model.Vehicle}");
+
                 // Add to the static list
                 _assignedTrips.Add(model);
+
+                // Log list count for verification
+                Console.WriteLine($"Total trips in list: {_assignedTrips.Count}");
 
                 return Json(new { success = true, message = "Trip assigned successfully" });
             }
@@ -68,14 +78,10 @@ namespace Web_Midterms_Grp6.Controllers
                 .Select(e => e.ErrorMessage)
                 .ToList();
 
-            return Json(new
-            {
-                success = false,
-                message = "Please correct the errors",
-                errors = errors
-            });
+            return Json(new { success = false, message = "Please correct the errors", errors = errors });
+        }
         }
     }
-}
+
 
 

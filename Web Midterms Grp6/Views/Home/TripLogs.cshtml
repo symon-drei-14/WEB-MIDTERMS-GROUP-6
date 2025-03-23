@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Trip Logs Management";
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -9,10 +10,75 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="/css/triplogs.css" rel="stylesheet" type="text/css" />
+    <link href="/css/nav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Web_Midterms_Grp6.styles.css" asp-append-version="true" />
     <script src="/js/triplogs.js" defer></script>
     <title>Trip Logs</title>
 </head>
 <body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="/img/logo.png" alt="Company Logo" class="logo">
+            <img src="/img/mansar.png" alt="Company Name" class="company">
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar">
+        </div>
+
+        <div class="profile">
+            <i class="icon">✉</i>
+            <img src="/img/profile.png" alt="Admin Profile" class="profile-icon">
+            <div class="profile-name">Jesus Christ</div>
+        </div>
+    </header>
+
+
+    <div class="sidebar">
+
+        <div class="sidebar-item">
+            <i class="icon">♛</i>
+            <a asp-area="" asp-controller="Home" asp-action="LandingPage">Home</a>
+        </div>
+        <div class="sidebar-item">
+            <i class="icon">☀</i>
+            <span class="text">Driver Management</span>
+        </div>
+        <div class="sidebar-item">
+            <i class="icon">✈</i>
+            <a asp-area="" asp-controller="Home" asp-action="FleetManagement">Fleet Management</a>
+        </div>
+        <div class="sidebar-item">
+            <i class="icon">☄</i>
+            <a asp-area="" asp-controller="Home" asp-action="TripLogs">Trip Logs</a>
+        </div>
+        <div class="sidebar-item">
+            <i class="icon">♨</i>
+            <span class="text">Tracking</span>
+        </div>
+        <div class="sidebar-item">
+            <i class="icon">⌦</i>
+            <a asp-area="" asp-controller="Home" asp-action="PreventiveMaintenance" class="text">Maintenance Scheduling</a>
+        </div>
+        <div class="sidebar-item">
+            <i class="icon"> ⤯ </i>
+            <span class="text">Fleet Performance Analytics</span>
+        </div>
+        <hr>
+        <div class="sidebar-item">
+            <i class="icon"> ☯ </i>
+            <span class="text">Settings</span>
+        </div>
+        <div class="sidebar-item">
+            <i class="icon"> ☢ </i>
+            <span class="text">Logout</span>
+        </div>
+    </div>
+
+
+    <div class="main-content">
     <section class="dashboard">
         <div class="container">
             <h2>Trip Logs Management</h2>
@@ -171,6 +237,7 @@
                 <button type="button" class="btn btn-danger" onclick="closeEditModal()">Cancel</button>
             </form>
         </div>
+    </div>
     </div>
 </body>
 </html>

@@ -23,6 +23,7 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\boot
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\js\site.js
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\css\login.css
+C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\css\nav.css
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\jquery\dist\jquery.min.map
@@ -74,12 +75,16 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\wwwroot\lib\boot
 wwwroot\css\fleetmanagement.css
 wwwroot\css\landingpage.css
 wwwroot\css\login.css
+wwwroot\css\nav.css
 wwwroot\css\prevmain.css
 wwwroot\css\site.css
 wwwroot\css\StyleSheet.css
 wwwroot\css\triplogs.css
 wwwroot\favicon.ico
 wwwroot\img\bggif.gif
+wwwroot\img\logo.png
+wwwroot\img\mansar.png
+wwwroot\img\profile.png
 wwwroot\js\fleetmanagement.js
 wwwroot\js\landingpage.js
 wwwroot\js\login.js

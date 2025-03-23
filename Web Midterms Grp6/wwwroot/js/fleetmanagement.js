@@ -8,7 +8,13 @@
     var activeTripsCounter = document.getElementById("active-trips-count");
 
     function updateActiveTripsCount() {
-        activeTripsCounter.textContent = tableBody.querySelectorAll("tr").length;
+        // Count rows with "In Progress" status
+        const inProgressRows = tableBody.querySelectorAll("tr td:nth-child(9)");
+        let count = 0;
+        inProgressRows.forEach(cell => {
+            if (cell.textContent === "In Progress") count++;
+        });
+        activeTripsCounter.textContent = count;
     }
 
     // Open Assign Trip Modal
@@ -24,21 +30,35 @@
     // Handle Assign Trip form submission
     assignForm.addEventListener("submit", function (event) {
         event.preventDefault();
+        console.log("Form submitted");
 
         // Create FormData object directly from the form
         const formData = new FormData(assignForm);
 
-        // Send form data using standard form encoding
+        // Debug: Log form data
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
+
+        // Get the anti-forgery token
+        const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+        // Send form data using AJAX with FormData
         fetch('/FleetManagement/AssignTrip', {
             method: 'POST',
             headers: {
-                'X-Requested-With': 'XMLHttpRequest'
-                // Don't set Content-Type when using FormData - the browser will set it correctly
+                'X-Requested-With': 'XMLHttpRequest',
+                'RequestVerificationToken': token
             },
             body: formData
         })
-            .then(response => response.json())
+            .then(response => {
+                console.log("Response status:", response.status);
+                return response.json();
+            })
             .then(data => {
+                console.log("Response data:", data);
+
                 if (data.success) {
                     // Get values from form for table update
                     const vehicle = document.getElementById("vehicle").value;
@@ -50,6 +70,25 @@
                     const departureTime = document.getElementById("departure-time").value;
                     const estimatedArrivalTime = document.getElementById("arrival-time").value;
 
+                    // Format dates for display
+                    const formattedDeparture = new Date(departureTime).toLocaleString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: 'numeric',
+                        minute: 'numeric',
+                        hour12: true
+                    });
+
+                    const formattedArrival = new Date(estimatedArrivalTime).toLocaleString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: 'numeric',
+                        minute: 'numeric',
+                        hour12: true
+                    });
+
                     // Create new row in the table
                     var newRow = document.createElement("tr");
                     newRow.innerHTML = `
@@ -59,16 +98,27 @@
                     <td>${client}</td>
                     <td>${containerNumber}</td>
                     <td>${destination}</td>
-                    <td>${new Date(departureTime).toLocaleString()}</td>
-                    <td>${new Date(estimatedArrivalTime).toLocaleString()}</td>
-                    <td>Assigned</td>
+                    <td>${formattedDeparture}</td>
+                    <td>${formattedArrival}</td>
+                    <td>In Progress</td>
                 `;
 
                     tableBody.appendChild(newRow);
                     updateActiveTripsCount();
 
+                    // Update vehicle status in the vehicles table
+                    const vehicleStatusCells = document.querySelectorAll("#view-vehicles tbody tr td:nth-child(2)");
+                    vehicleStatusCells.forEach(cell => {
+                        if (cell.parentElement.querySelector("td:first-child").textContent === vehicle) {
+                            cell.textContent = "In-Use";
+                        }
+                    });
+
                     assignModal.style.display = "none";
                     assignForm.reset();
+
+                    // Show success message
+                    alert('Trip assigned successfully!');
                 } else {
                     // Display errors
                     if (data.errors && data.errors.length > 0) {
