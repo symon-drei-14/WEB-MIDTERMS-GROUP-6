@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>li6urfakzn</Fingerprint>
-      <Integrity>g0ykTSuD4ASxgsmC8BYR0/+zJGv0MVYKJAB48X4u05A=</Integrity>
+      <Fingerprint>llusk1sfad</Fingerprint>
+      <Integrity>F752S65Lv9CTgUSWVgnr2vkWchnL1vOwbvOMZ6VMJkA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\fleetmanagement.js'))</OriginalItemSpec>

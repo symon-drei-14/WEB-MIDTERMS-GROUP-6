@@ -3,7 +3,7 @@
     var assignModal = document.getElementById("assign-trip-modal");
     var assignTripBtn = document.getElementById("trip-assign-button");
     var closeAssignModal = assignModal.querySelector(".close-btn");
-    var assignForm = assignModal.querySelector("form");
+    var assignForm = document.getElementById("assign-trip-form");
     var tableBody = document.querySelector("#assigned-trips tbody");
     var activeTripsCounter = document.getElementById("active-trips-count");
 
@@ -25,46 +25,71 @@
     assignForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        var vehicle = document.getElementById("vehicle").value;
-        var driver = document.getElementById("driver").value;
-        var assistant = document.getElementById("assistant").value;
-        var client = document.getElementById("client").value;
-        var container = document.getElementById("container").value;
-        var destination = document.getElementById("destination").value;
-        var departureTime = document.getElementById("departure-time").value;
-        var arrivalTime = document.getElementById("arrival-time").value;
+        // Create FormData object directly from the form
+        const formData = new FormData(assignForm);
 
-        var newRow = document.createElement("tr");
-        newRow.innerHTML = `
-            <td>${vehicle}</td>
-            <td>${driver}</td>
-            <td>${assistant}</td>
-            <td>${client}</td>
-            <td>${container}</td>
-            <td>${destination}</td>
-            <td>${new Date(departureTime).toLocaleString()}</td>
-            <td>${new Date(arrivalTime).toLocaleString()}</td>
-            <td>Assigned</td>
-        `;
+        // Send form data using standard form encoding
+        fetch('/FleetManagement/AssignTrip', {
+            method: 'POST',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+                // Don't set Content-Type when using FormData - the browser will set it correctly
+            },
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Get values from form for table update
+                    const vehicle = document.getElementById("vehicle").value;
+                    const driver = document.getElementById("driver").value;
+                    const driverAssistant = document.getElementById("assistant").value;
+                    const client = document.getElementById("client").value;
+                    const containerNumber = document.getElementById("container").value;
+                    const destination = document.getElementById("destination").value;
+                    const departureTime = document.getElementById("departure-time").value;
+                    const estimatedArrivalTime = document.getElementById("arrival-time").value;
 
-        tableBody.appendChild(newRow);
-        updateActiveTripsCount();
+                    // Create new row in the table
+                    var newRow = document.createElement("tr");
+                    newRow.innerHTML = `
+                    <td>${vehicle}</td>
+                    <td>${driver}</td>
+                    <td>${driverAssistant}</td>
+                    <td>${client}</td>
+                    <td>${containerNumber}</td>
+                    <td>${destination}</td>
+                    <td>${new Date(departureTime).toLocaleString()}</td>
+                    <td>${new Date(estimatedArrivalTime).toLocaleString()}</td>
+                    <td>Assigned</td>
+                `;
 
-        assignModal.style.display = "none";
-        assignForm.reset();
+                    tableBody.appendChild(newRow);
+                    updateActiveTripsCount();
+
+                    assignModal.style.display = "none";
+                    assignForm.reset();
+                } else {
+                    // Display errors
+                    if (data.errors && data.errors.length > 0) {
+                        alert('Error: ' + data.errors.join(', '));
+                    } else {
+                        alert('Error: ' + data.message);
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the form.');
+            });
     });
 
     // Report Damage Modal
     var damageModal = document.getElementById("damage-modal");
     var reportButtons = document.querySelectorAll(".damage-report-button");
     var closeDamageModal = damageModal.querySelector(".close-btn");
-    var damageForm = damageModal.querySelector("form");
-    var damageTableBody = document.querySelector("#reported-damages tbody");
+    var damageForm = document.getElementById("damage-form");
     var damagedVehiclesCounter = document.getElementById("damaged-vehicles-count");
-
-    function updateDamagedVehiclesCount() {
-        damagedVehiclesCounter.textContent = damageTableBody.querySelectorAll("tr").length;
-    }
 
     // Open Report Damage Modal
     reportButtons.forEach(function (button) {
@@ -84,30 +109,23 @@
     damageForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        var vehicle = document.getElementById("damage-vehicle").value.trim();
-        var driver = document.getElementById("damage-driver").value.trim();
-        var description = document.getElementById("damage-description").value.trim();
-        var reportedDate = document.getElementById("damage-date").value.trim();
+        var vehicle = document.getElementById("vehicle-name").textContent;
+        var damageType = document.getElementById("damage-type").value;
+        var damageDescription = document.getElementById("damage-description").value.trim();
+        var driver = document.querySelector("#damage-form select[name='driver']").value;
 
-        if (vehicle && driver && description && reportedDate) {
-            var newRow = document.createElement("tr");
-            newRow.innerHTML = `
-                <td>${vehicle}</td>
-                <td>${driver}</td>
-                <td>${description}</td>
-                <td>${new Date(reportedDate).toLocaleString()}</td>
-                <td>Pending</td>
-            `;
-
-            damageTableBody.appendChild(newRow);
-            updateDamagedVehiclesCount();
-
+        if (damageDescription && damageType && driver) {
+            // In a real app, you would send this data to the server
             alert("Damage Report Sent!");
+
+            // Update damaged vehicle count (visual only)
+            var currentCount = parseInt(damagedVehiclesCounter.textContent);
+            damagedVehiclesCounter.textContent = currentCount + 1;
 
             damageModal.style.display = "none";
             damageForm.reset();
         } else {
-            alert("Please fill in all fields before submitting.");
+            alert("Please fill in all required fields before submitting.");
         }
     });
 
@@ -123,5 +141,4 @@
 
     // Initialize counts on page load
     updateActiveTripsCount();
-    updateDamagedVehiclesCount();
 });

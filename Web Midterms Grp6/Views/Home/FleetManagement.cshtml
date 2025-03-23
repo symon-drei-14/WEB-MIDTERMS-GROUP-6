@@ -1,6 +1,7 @@
-﻿@{
+﻿@model List<Web_Midterms_Grp6.Models.AssignTrip>
+@{
     // Layout = null;
-
+    var trips = Model ?? new List<Web_Midterms_Grp6.Models.AssignTrip>();
 }
 
 <!DOCTYPE html>
@@ -12,20 +13,16 @@
     <script src="/js/fleetmanagement.js" defer></script>
     <title>Fleet Management Dashboard</title>
     <style>
-
-
+        /* Your additional styles if needed */
     </style>
 </head>
 <body>
-
-    
-
     <section class="dashboard">
-        <button id="trip-assign-button"><a href="#" style="color: white; text-decoration: none;">Assign Trip</a></button>
+        <button id="trip-assign-button" style="color: white; text-decoration: none;">Assign Trip</button>
         <h2>Fleet Management Dashboard</h2>
         <div class="overview">
             <p>Total Vehicles: 15</p>
-            <p>Active Trips: <span id="active-trips-count">0</span></p>
+            <p>Active Trips: <span id="active-trips-count">@trips.Count(t => t.Status == "In Progress")</span></p>
             <p>Damaged Vehicles: <span id="damaged-vehicles-count">3</span></p>
         </div>
     </section>
@@ -47,28 +44,20 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Vehicle 1</td>
-                    <td>Driver 1</td>
-                    <td>Driver Assistant 1</td>
-                    <td>Toyota</td>
-                    <td>23193081</td>
-                    <td>Destination A</td>
-                    <td>March 19, 2025 10:00 AM</td>
-                    <td>March 19, 2025 4:00 PM</td>
-                    <td>In Progress</td>
-                </tr>
-                <tr>
-                    <td>Vehicle 2</td>
-                    <td>Driver 2</td>
-                    <td>Driver Assistant 2</td>
-                    <td>Mastabushi</td>
-                    <td>23193081</td>
-                    <td>Destination B</td>
-                    <td>March 20, 2025 9:00 AM</td>
-                    <td>March 20, 2025 3:00 PM</td>
-                    <td>Assigned</td>
-                </tr>
+                @foreach (var trip in trips)
+                {
+                    <tr>
+                        <td>@trip.Vehicle</td>
+                        <td>@trip.Driver</td>
+                        <td>@trip.DriverAssistant</td>
+                        <td>@trip.Client</td>
+                        <td>@trip.ContainerNumber</td>
+                        <td>@trip.Destination</td>
+                        <td>@trip.DepartureTime.ToString("MMMM dd, yyyy h:mm tt")</td>
+                        <td>@trip.EstimatedArrivalTime.ToString("MMMM dd, yyyy h:mm tt")</td>
+                        <td>@trip.Status</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </section>
@@ -89,16 +78,16 @@
             <tbody>
                 <tr>
                     <td>Vehicle 1</td>
-                    <td>In-Use</td>
-                    <td>March 19, 2025</td>
+                    <td>@(trips.Any(t => t.Vehicle == "Vehicle 1" && t.Status == "In Progress") ? "In-Use" : "Available")</td>
+                    <td>@(trips.Where(t => t.Vehicle == "Vehicle 1").OrderByDescending(t => t.DepartureTime).FirstOrDefault()?.DepartureTime.ToString("MMMM dd, yyyy") ?? "None")</td>
                     <td>Location A</td>
                     <td>Completed</td>
                     <td><button class="damage-report-button" data-vehicle="Vehicle 1">Report Damage</button></td>
                 </tr>
                 <tr>
                     <td>Vehicle 2</td>
-                    <td>Available</td>
-                    <td>None</td>
+                    <td>@(trips.Any(t => t.Vehicle == "Vehicle 2" && t.Status == "In Progress") ? "In-Use" : "Available")</td>
+                    <td>@(trips.Where(t => t.Vehicle == "Vehicle 2").OrderByDescending(t => t.DepartureTime).FirstOrDefault()?.DepartureTime.ToString("MMMM dd, yyyy") ?? "None")</td>
                     <td>Location B</td>
                     <td>Completed</td>
                     <td><button class="damage-report-button" data-vehicle="Vehicle 2">Report Damage</button></td>
@@ -107,51 +96,54 @@
         </table>
     </section>
 
-    <!-- Dassign Trip Modal -->
+    <!-- Assign Trip Modal -->
     <div id="assign-trip-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>Assign Trip</h2>
-            <form action="/assign-trip" method="post">
-                <label for="vehicle">Select Vehicle:</label>
-                <select id="vehicle" name="vehicle">
-                    <option value="vehicle1">Vehicle 1</option>
-                    <option value="vehicle2">Vehicle 2</option>
+            <form asp-controller="FleetManagement" asp-action="AssignTrip" method="post" id="assign-trip-form">
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <label for="Vehicle">Select Vehicle:</label>
+                <select name="Vehicle" id="vehicle">
+                    <option value="Vehicle 1">Vehicle 1</option>
+                    <option value="Vehicle 2">Vehicle 2</option>
                 </select>
 
-                <label for="driver">Select Driver:</label>
-                <select id="driver" name="driver">
-                    <option value="driver1">Driver 1</option>
-                    <option value="driver2">Driver 2</option>
+                <label for="Driver">Select Driver:</label>
+                <select name="Driver" id="driver">
+                    <option value="Driver 1">Driver 1</option>
+                    <option value="Driver 2">Driver 2</option>
                 </select>
 
-                <label for="assistant">Select Assistant:</label>
-                <select id="assistant" name="assistant">
-                    <option value="Assistant1">Assistant 1</option>
-                    <option value="Assistant2">Assistant 2</option>
+                <label for="DriverAssistant">Select Assistant:</label>
+                <select name="DriverAssistant" id="assistant">
+                    <option value="Driver Assistant 1">Assistant 1</option>
+                    <option value="Driver Assistant 2">Assistant 2</option>
                 </select>
 
-                <label for="client">Client:</label>
-                <input type="text" id="client" name="client" required>
+                <label for="Client">Client:</label>
+                <input name="Client" id="client" required />
 
-                <label for="container">Container No.:</label>
-                <input type="text" id="container" name="container" required>
+                <label for="ContainerNumber">Container No.:</label>
+                <input name="ContainerNumber" id="container" required />
 
-                <label for="destination">Destination:</label>
-                <input type="text" id="destination" name="destination" required>
+                <label for="Destination">Destination:</label>
+                <input name="Destination" id="destination" required />
 
-                <label for="departure-time">Departure Date and Time:</label>
-                <input type="datetime-local" id="departure-time" name="departure-time" required>
+                <label for="DepartureTime">Departure Date and Time:</label>
+                <input name="DepartureTime" type="datetime-local" id="departure-time" required />
 
-                <label for="arrival-time">Estimated Arrival Date and Time:</label>
-                <input type="datetime-local" id="arrival-time" name="arrival-time" required>
+                <label for="EstimatedArrivalTime">Estimated Arrival Date and Time:</label>
+                <input name="EstimatedArrivalTime" type="datetime-local" id="arrival-time" required />
 
                 <button type="submit">Assign Trip</button>
             </form>
         </div>
     </div>
 
-    <!-- Dis Is The Damage Report -->
+    <!-- Damage Report Modal -->
     <div id="damage-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -171,7 +163,7 @@
                 <input type="file" id="damage-photo" name="damage-photo">
 
                 <label for="driver_damage">Driver in Charge:</label>
-                <select id="driver" name="driver">
+                <select id="driver_damage" name="driver_damage">
                     <option value="driver1">Driver 1</option>
                     <option value="driver2">Driver 2</option>
                 </select>
@@ -181,7 +173,8 @@
         </div>
     </div>
 
-
-
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 </body>
 </html>
