@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="~/Web_Midterms_Grp6.styles.css" asp-append-version="true" />
     <script src="/js/fleetmanagement.js" defer></script>
     <title>Fleet Management Dashboard</title>
-   
+
 </head>
 <body>
-   
+
     <header class="header">
         <div class="logo-container">
-                <img src="/img/logo.png" alt="Company Logo" class="logo">
-                <img src="/img/mansar.png" alt="Company Name" class="company">
+            <img src="/img/logo.png" alt="Company Logo" class="logo">
+            <img src="/img/mansar.png" alt="Company Name" class="company">
         </div>
 
         <div class="search-container">
@@ -33,7 +33,7 @@
 
         <div class="profile">
             <i class="icon">✉</i>
-                <img src="/img/profile.png" alt="Admin Profile" class="profile-icon">
+            <img src="/img/profile.png" alt="Admin Profile" class="profile-icon">
             <div class="profile-name">Jesus Christ</div>
         </div>
     </header>
@@ -43,7 +43,7 @@
 
         <div class="sidebar-item">
             <i class="icon">♛</i>
-             <a asp-area="" asp-controller="Home" asp-action="LandingPage">Home</a>
+            <a asp-area="" asp-controller="Home" asp-action="LandingPage">Home</a>
         </div>
         <div class="sidebar-item">
             <i class="icon">☀</i>
@@ -82,162 +82,197 @@
 
 
     <div class="main-content">
-    <section class="dashboard">
-        <button id="trip-assign-button" style="color: white; text-decoration: none;">Assign Trip</button>
-        <h2>Fleet Management Dashboard</h2>
-        <div class="overview">
-            <p>Total Vehicles: 15</p>
-            <p>Active Trips: <span id="active-trips-count">@trips.Count(t => t.Status == "In Progress")</span></p>
-            <p>Damaged Vehicles: <span id="damaged-vehicles-count">3</span></p>
-        </div>
-    </section>
+        <section class="dashboard">
+            <button id="trip-assign-button" style="color: white; text-decoration: none;">Assign Trip</button>
+            <h2>Fleet Management Dashboard</h2>
+            <div class="overview">
+                <div class="counter">
+                    <div class="circle" id="total-vehicles">
+                        <span class="count">15</span>
+                    </div>
+                    <p>Total Vehicles</p>
+                </div>
+                <div class="counter">
+                    <div class="circle2" id="active-trips">
+                        <span class="count">@trips.Count(t => t.Status == "In Progress")</span>
+                    </div>
+                    <p>Active Trips</p>
+                </div>
+                <div class="counter">
+                    <div class="circle3" id="damaged-vehicles">
+                        <span class="count">3</span>
+                    </div>
+                    <p>Damaged Vehicles</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="assigned-trips">
-        <h2>Assigned Trips</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Vehicle</th>
-                    <th>Driver</th>
-                    <th>Driver Assistant</th>
-                    <th>Client</th>
-                    <th>Container No.</th>
-                    <th>Destination</th>
-                    <th>Departure Time</th>
-                    <th>Estimated Arrival Time</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var trip in trips)
-                {
+        <section id="assigned-trips">
+            <h2>Assigned Trips</h2>
+            <table>
+                <thead>
                     <tr>
-                        <td>@trip.Vehicle</td>
-                        <td>@trip.Driver</td>
-                        <td>@trip.DriverAssistant</td>
-                        <td>@trip.Client</td>
-                        <td>@trip.ContainerNumber</td>
-                        <td>@trip.Destination</td>
-                        <td>@trip.DepartureTime.ToString("MMMM dd, yyyy h:mm tt")</td>
-                        <td>@trip.EstimatedArrivalTime.ToString("MMMM dd, yyyy h:mm tt")</td>
-                        <td>@trip.Status</td>
+                        <th>Vehicle</th>
+                        <th>Driver</th>
+                        <th>Driver Assistant</th>
+                        <th>Client</th>
+                        <th>Container No.</th>
+                        <th>Destination</th>
+                        <th>Departure Time</th>
+                        <th>Estimated Arrival Time</th>
+                        <th>Status</th>
                     </tr>
-                }
-            </tbody>
-        </table>
-    </section>
+                </thead>
+                <tbody>
+                    @foreach (var trip in trips)
+                    {
+                        <tr>
+                            <td>@trip.Vehicle</td>
+                            <td>@trip.Driver</td>
+                            <td>@trip.DriverAssistant</td>
+                            <td>@trip.Client</td>
+                            <td>@trip.ContainerNumber</td>
+                            <td>@trip.Destination</td>
+                            <td>@trip.DepartureTime.ToString("MMMM dd, yyyy h:mm tt")</td>
+                            <td>@trip.EstimatedArrivalTime.ToString("MMMM dd, yyyy h:mm tt")</td>
+                            <td>@trip.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
 
-    <section id="view-vehicles">
-        <h2>Vehicle Status</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Vehicle</th>
-                    <th>Status</th>
-                    <th>Last Trip</th>
-                    <th>Location</th>
-                    <th>Maintenance</th>
-                    <th>Report Damage</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Vehicle 1</td>
-                    <td>@(trips.Any(t => t.Vehicle == "Vehicle 1" && t.Status == "In Progress") ? "In-Use" : "Available")</td>
-                    <td>@(trips.Where(t => t.Vehicle == "Vehicle 1").OrderByDescending(t => t.DepartureTime).FirstOrDefault()?.DepartureTime.ToString("MMMM dd, yyyy") ?? "None")</td>
-                    <td>Location A</td>
-                    <td>Completed</td>
-                    <td><button class="damage-report-button" data-vehicle="Vehicle 1">Report Damage</button></td>
-                </tr>
-                <tr>
-                    <td>Vehicle 2</td>
-                    <td>@(trips.Any(t => t.Vehicle == "Vehicle 2" && t.Status == "In Progress") ? "In-Use" : "Available")</td>
-                    <td>@(trips.Where(t => t.Vehicle == "Vehicle 2").OrderByDescending(t => t.DepartureTime).FirstOrDefault()?.DepartureTime.ToString("MMMM dd, yyyy") ?? "None")</td>
-                    <td>Location B</td>
-                    <td>Completed</td>
-                    <td><button class="damage-report-button" data-vehicle="Vehicle 2">Report Damage</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+        <section id="view-vehicles">
+            <h2>Vehicle Status</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Status</th>
+                        <th>Last Trip</th>
+                        <th>Location</th>
+                        <th>Maintenance</th>
+                        <th>Report Damage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vehicle 1</td>
+                        <td>@(trips.Any(t => t.Vehicle == "Vehicle 1" && t.Status == "In Progress") ? "In-Use" : "Available")</td>
+                        <td>@(trips.Where(t => t.Vehicle == "Vehicle 1").OrderByDescending(t => t.DepartureTime).FirstOrDefault()?.DepartureTime.ToString("MMMM dd, yyyy") ?? "None")</td>
+                        <td>Location A</td>
+                        <td>Completed</td>
+                        <td><button class="damage-report-button" data-vehicle="Vehicle 1">Report Damage</button></td>
+                    </tr>
+                    <tr>
+                        <td>Vehicle 2</td>
+                        <td>@(trips.Any(t => t.Vehicle == "Vehicle 2" && t.Status == "In Progress") ? "In-Use" : "Available")</td>
+                        <td>@(trips.Where(t => t.Vehicle == "Vehicle 2").OrderByDescending(t => t.DepartureTime).FirstOrDefault()?.DepartureTime.ToString("MMMM dd, yyyy") ?? "None")</td>
+                        <td>Location B</td>
+                        <td>Completed</td>
+                        <td><button class="damage-report-button" data-vehicle="Vehicle 2">Report Damage</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-    <!-- Assign Trip Modal -->
-    <div id="assign-trip-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Assign Trip</h2>
-            <form asp-controller="FleetManagement" asp-action="AssignTrip" method="post" id="assign-trip-form">
-                @Html.AntiForgeryToken()
-                <div asp-validation-summary="All" class="text-danger"></div>
+        <!-- Assign Trip Modal -->
+        <div id="assign-trip-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Assign Trip</h2>
+                <form asp-controller="FleetManagement" asp-action="AssignTrip" method="post" id="assign-trip-form">
+                    @Html.AntiForgeryToken()
+                    <div asp-validation-summary="All" class="text-danger"></div>
 
-                <label for="Vehicle">Select Vehicle:</label>
-                <select name="Vehicle" id="vehicle">
-                    <option value="Vehicle 1">Vehicle 1</option>
-                    <option value="Vehicle 2">Vehicle 2</option>
-                </select>
+                    <label for="Vehicle">Select Vehicle:</label>
+                    <select name="Vehicle" id="vehicle">
+                        <option value="Vehicle 1">Vehicle 1</option>
+                        <option value="Vehicle 2">Vehicle 2</option>
+                    </select>
 
-                <label for="Driver">Select Driver:</label>
-                <select name="Driver" id="driver">
-                    <option value="Driver 1">Driver 1</option>
-                    <option value="Driver 2">Driver 2</option>
-                </select>
+                    <label for="Driver">Select Driver:</label>
+                    <select name="Driver" id="driver">
+                        <option value="Driver 1">Driver 1</option>
+                        <option value="Driver 2">Driver 2</option>
+                    </select>
 
-                <label for="DriverAssistant">Select Assistant:</label>
-                <select name="DriverAssistant" id="assistant">
-                    <option value="Driver Assistant 1">Assistant 1</option>
-                    <option value="Driver Assistant 2">Assistant 2</option>
-                </select>
+                    <label for="DriverAssistant">Select Assistant:</label>
+                    <select name="DriverAssistant" id="assistant">
+                        <option value="Driver Assistant 1">Assistant 1</option>
+                        <option value="Driver Assistant 2">Assistant 2</option>
+                    </select>
 
-                <label for="Client">Client:</label>
-                <input name="Client" id="client" required />
+                    <label for="Client">Client:</label>
+                    <input name="Client" id="client" required />
 
-                <label for="ContainerNumber">Container No.:</label>
-                <input name="ContainerNumber" id="container" required />
+                    <label for="ContainerNumber">Container No.:</label>
+                    <input name="ContainerNumber" id="container" required />
 
-                <label for="Destination">Destination:</label>
-                <input name="Destination" id="destination" required />
+                    <label for="Destination">Destination:</label>
+                    <input name="Destination" id="destination" required />
 
-                <label for="DepartureTime">Departure Date and Time:</label>
-                <input name="DepartureTime" type="datetime-local" id="departure-time" required />
+                    <label for="DepartureTime">Departure Date and Time:</label>
+                    <input name="DepartureTime" type="datetime-local" id="departure-time" required />
 
-                <label for="EstimatedArrivalTime">Estimated Arrival Date and Time:</label>
-                <input name="EstimatedArrivalTime" type="datetime-local" id="arrival-time" required />
+                    <label for="EstimatedArrivalTime">Estimated Arrival Date and Time:</label>
+                    <input name="EstimatedArrivalTime" type="datetime-local" id="arrival-time" required />
 
-                <button type="submit">Assign Trip</button>
-            </form>
+                    <button type="submit">Assign Trip</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Damage Report Modal -->
+        <div id="damage-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Report Damage for <span id="vehicle-name"></span></h2>
+                <form id="damage-form">
+                    <label for="damage-type">Type of Damage:</label>
+                    <select id="damage-type" name="damage-type">
+                        <option value="engine">Engine</option>
+                        <option value="tires">Tires</option>
+                        <option value="body">Body</option>
+                    </select>
+
+                    <label for="damage-description">Description:</label>
+                    <textarea id="damage-description" name="damage-description" required></textarea>
+
+                    <label for="damage-photo">Upload Photo:</label>
+                    <input type="file" id="damage-photo" name="damage-photo">
+
+                    <label for="driver_damage">Driver in Charge:</label>
+                    <select id="driver_damage" name="driver_damage">
+                        <option value="driver1">Driver 1</option>
+                        <option value="driver2">Driver 2</option>
+                    </select>
+
+                    <button type="submit">Submit Damage Report</button>
+                </form>
+            </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const counters = document.querySelectorAll('.count');
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.innerText; // Get the target number
+                    const count = +counter.innerText; // Get the current count
+                    const increment = target / 200; // Increment value
 
-    <!-- Damage Report Modal -->
-    <div id="damage-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Report Damage for <span id="vehicle-name"></span></h2>
-            <form id="damage-form">
-                <label for="damage-type">Type of Damage:</label>
-                <select id="damage-type" name="damage-type">
-                    <option value="engine">Engine</option>
-                    <option value="tires">Tires</option>
-                    <option value="body">Body</option>
-                </select>
-
-                <label for="damage-description">Description:</label>
-                <textarea id="damage-description" name="damage-description" required></textarea>
-
-                <label for="damage-photo">Upload Photo:</label>
-                <input type="file" id="damage-photo" name="damage-photo">
-
-                <label for="driver_damage">Driver in Charge:</label>
-                <select id="driver_damage" name="driver_damage">
-                    <option value="driver1">Driver 1</option>
-                    <option value="driver2">Driver 2</option>
-                </select>
-
-                <button type="submit">Submit Damage Report</button>
-            </form>
-        </div>
-    </div>
-    </div>
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 1); // Call the function again
+                    } else {
+                        counter.innerText = target; // Ensure it ends at the target
+                    }
+                };
+                updateCount();
+            });
+        });
+    </script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
