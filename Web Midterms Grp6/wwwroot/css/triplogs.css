@@ -143,23 +143,29 @@ body {
 
 /* Container that holds the table */
 .container {
-    max-width: 100%;
+    /*max-width: 100%;
     padding: 10px;
-    overflow-x: auto; /* Enable horizontal scrolling */
-
+    overflow-x: auto;*/ /* Enable horizontal scrolling */
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 5px;
 }
 
 /* Table container */
 .responsive-table {
-    min-width: 100%;
+    /*    min-width: 100%;
     border-collapse: separate;
-    border-spacing: 0 10px;
+    border-spacing: 0 10px;*/
+    min-width: auto;
+    width: 100%;
+    table-layout: fixed;
 }
 
 /* Table header */
 .table-header {
-    background-color: #4386d6;
-    font-size: 14px;
+    background-color: #70b2ff;
+    padding: 8px 5px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     display: flex;
@@ -180,45 +186,117 @@ body {
 }
 
 /* All columns */
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
+/*.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
     padding: 10px;
     text-align: center;
     font-weight: bold;
-}
+}*/
 
 /* Specific column widths */
-.col-1 {
+/*.col-1 {
     flex: 0.7;
-}
+}*/
 /* Date */
-.col-2, .col-3, .col-4 {
+/*.col-2, .col-3, .col-4 {
     flex: 1;
-}
+}*/
 /* Standard columns */
-.col-5, .col-6 {
+/*.col-5, .col-6 {
     flex: 1.2;
-}
+}*/
 /* Container numbers */
-.col-7 {
+/*.col-7 {
     flex: 0.8;
-}
+}*/
 /* Status */
-.col-8, .col-9, .col-10 {
+/*.col-8, .col-9, .col-10 {
     flex: 1;
-}
+}*/
 /* Financial columns */
-.col-11 {
+/*.col-11 {
     flex: 1.2;
-}
+}*/
 /* Actions */
 
-/* Make table rows and columns handle overflow better */
-.col {
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
+    padding: 5px;
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
+/* Adjust column widths based on content needs */
+.col-1 {
+    flex: 0.6;
+}
+/* Date - make smaller */
+.col-2 {
+    flex: 0.8;
+}
+/* Driver */
+.col-3 {
+    flex: 0.9;
+}
+/* Broker/Client */
+.col-4 {
+    flex: 0.9;
+}
+/* Destination */
+.col-5 {
+    flex: 0.8;
+}
+/* Container No. */
+.col-6 {
+    flex: 0.8;
+}
+/* BL REF NO. */
+.col-7 {
+    flex: 0.6;
+}
+/* Status - make smaller */
+.col-8 {
+    flex: 0.8;
+}
+/* Cash Advance */
+.col-9 {
+    flex: 0.8;
+}
+/* Additional Cash Advance */
+.col-10 {
+    flex: 0.8;
+}
+/* Total Amount */
+.col-11 {
+    flex: 0.8;
+}
+/* Actions */
+
+/* Make table rows and columns handle overflow better */
+/*.col {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}*/
+
+.col {
+    position: relative;
+}
+    .col:hover::after {
+        content: attr(data-label) ": " attr(title);
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: #333;
+        color: #fff;
+        padding: 5px;
+        border-radius: 3px;
+        z-index: 1;
+        max-width: 200px;
+        white-space: normal;
+        display: none;
+    }
 /* Mobile styles */
 @media (max-width: 767px) {
     .table-header {
@@ -310,11 +388,14 @@ body {
 }
 
 .btn {
-    padding: 10px 15px;
+/*    padding: 10px 15px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;*/
+    padding: 5px 8px;
+    font-size: 12px;
+
 }
 
 .btn-primary {

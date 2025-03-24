@@ -191,3 +191,9 @@
     transition: margin-left 0.3s ease;
     overflow-y: auto;
 }
+
+.main-content4 {
+    margin-left: 100px;
+    margin-right: 10px;
+    width: calc(100% - 110px);
+}
