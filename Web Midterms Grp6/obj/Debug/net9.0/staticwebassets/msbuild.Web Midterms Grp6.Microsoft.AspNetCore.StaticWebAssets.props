@@ -138,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>x80vxr940i</Fingerprint>
-      <Integrity>AbDLcUTzBSk7DBSownyKMcyXY+oWw/X02dAi7ei56BA=</Integrity>
+      <Fingerprint>67aw18bth1</Fingerprint>
+      <Integrity>XlOSQoTto+THDFRC6uoXT/HH0LxzwqJWLSM5hogbuF0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\triplogs.css'))</OriginalItemSpec>

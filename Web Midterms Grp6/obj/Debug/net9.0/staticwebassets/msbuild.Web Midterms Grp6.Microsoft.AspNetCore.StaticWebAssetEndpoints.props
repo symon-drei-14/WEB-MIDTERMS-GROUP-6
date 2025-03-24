@@ -84,17 +84,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dyjx89twm7"},{"Name":"integrity","Value":"sha256-u4DszuiY1WLPnENub5\u002BKbAlwyJCcCHdKlyaXaKLaRqk="},{"Name":"label","Value":"_content/Web Midterms Grp6/css/StyleSheet.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022u4DszuiY1WLPnENub5\u002BKbAlwyJCcCHdKlyaXaKLaRqk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Mar 2025 12:47:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/triplogs.67aw18bth1.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\triplogs.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"67aw18bth1"},{"Name":"integrity","Value":"sha256-XlOSQoTto\u002BTHDFRC6uoXT/HH0LxzwqJWLSM5hogbuF0="},{"Name":"label","Value":"_content/Web Midterms Grp6/css/triplogs.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6122"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022XlOSQoTto\u002BTHDFRC6uoXT/HH0LxzwqJWLSM5hogbuF0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 14:56:43 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/triplogs.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\triplogs.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-AbDLcUTzBSk7DBSownyKMcyXY\u002BoWw/X02dAi7ei56BA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"9110"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022AbDLcUTzBSk7DBSownyKMcyXY\u002BoWw/X02dAi7ei56BA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 14:37:46 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/css/triplogs.x80vxr940i.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\triplogs.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"x80vxr940i"},{"Name":"integrity","Value":"sha256-AbDLcUTzBSk7DBSownyKMcyXY\u002BoWw/X02dAi7ei56BA="},{"Name":"label","Value":"_content/Web Midterms Grp6/css/triplogs.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9110"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022AbDLcUTzBSk7DBSownyKMcyXY\u002BoWw/X02dAi7ei56BA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 14:37:46 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XlOSQoTto\u002BTHDFRC6uoXT/HH0LxzwqJWLSM5hogbuF0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6122"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022XlOSQoTto\u002BTHDFRC6uoXT/HH0LxzwqJWLSM5hogbuF0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 14:56:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
