@@ -6,28 +6,53 @@
 
 /* Container that holds the table */
 .container {
-    /*max-width: 100%;
-    padding: 10px;
-    overflow-x: auto;*/ /* Enable horizontal scrolling */
     max-width: 95%;
     margin: 0 auto;
     padding: 5px;
 }
 
+    /* Add styling for the heading and button container */
+    .container h2 {
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+/* Button styling */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: auto; /* Allow it to fit its content */
+}
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
 /* Table container */
 .responsive-table {
-    /*    min-width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px;*/
     min-width: auto;
     width: 100%;
     table-layout: fixed;
+    list-style-type: none;
+    padding: 0;
+}
+.button-wrapper {
+    display: flex;
+    justify-content: flex-start; /* Align left */
 }
 
 /* Table header */
 .table-header {
     background-color: #70b2ff;
     padding: 8px 5px;
+    height: 40px; /* Reduced from 50px */
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -35,7 +60,7 @@
     border-radius: 5px;
     width: 100%;
     margin-bottom: 10px;
-    justify-content: center; /* Center the header content */
+    justify-content: center;
 }
 
 /* Table row */
@@ -47,40 +72,6 @@
     border-radius: 3px;
     justify-content: center;
 }
-
-/* All columns */
-/*.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-}*/
-
-/* Specific column widths */
-/*.col-1 {
-    flex: 0.7;
-}*/
-/* Date */
-/*.col-2, .col-3, .col-4 {
-    flex: 1;
-}*/
-/* Standard columns */
-/*.col-5, .col-6 {
-    flex: 1.2;
-}*/
-/* Container numbers */
-/*.col-7 {
-    flex: 0.8;
-}*/
-/* Status */
-/*.col-8, .col-9, .col-10 {
-    flex: 1;
-}*/
-/* Financial columns */
-/*.col-11 {
-    flex: 1.2;
-}*/
-/* Actions */
-
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
     padding: 5px;
@@ -136,16 +127,10 @@
 }
 /* Actions */
 
-/* Make table rows and columns handle overflow better */
-/*.col {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}*/
-
 .col {
     position: relative;
 }
+
     .col:hover::after {
         content: attr(data-label) ": " attr(title);
         position: absolute;
@@ -160,6 +145,7 @@
         white-space: normal;
         display: none;
     }
+
 /* Mobile styles */
 @media (max-width: 767px) {
     .table-header {
@@ -214,7 +200,7 @@
 
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* Center vertically with space from top */
+    margin: 10% auto;
     padding: 20px;
     border-radius: 5px;
     width: 50%;
@@ -251,14 +237,11 @@
 }
 
 .btn {
-/*    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 10px;*/
     padding: 5px 8px;
     font-size: 12px;
-
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
 .btn-primary {
@@ -272,6 +255,11 @@
 
 .btn-danger {
     background-color: #e74c3c;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #f39c12;
     color: white;
 }
 
@@ -322,13 +310,3 @@
     justify-content: center;
     align-items: center;
 }
-
-.col-11 {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-    .col-11 form {
-        display: inline-block;
-    }

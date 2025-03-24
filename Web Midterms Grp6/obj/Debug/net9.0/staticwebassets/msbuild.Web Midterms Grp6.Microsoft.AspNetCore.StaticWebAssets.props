@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jlw0zualnt</Fingerprint>
-      <Integrity>B8BtEkzW014cPj8p88veT2mGiPHopuC0ZtAihIYHHew=</Integrity>
+      <Fingerprint>59v2i363lz</Fingerprint>
+      <Integrity>R5eKGY2eOMD/siCluCp0ytjPT1Df9eTHOaluPBckQZ8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\nav.css'))</OriginalItemSpec>
@@ -138,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>67aw18bth1</Fingerprint>
-      <Integrity>XlOSQoTto+THDFRC6uoXT/HH0LxzwqJWLSM5hogbuF0=</Integrity>
+      <Fingerprint>6mkvqj884j</Fingerprint>
+      <Integrity>HoC1InkFj8MYmKjUVmtsYM+VqgfiJPDpMBSlfWez0Pg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\triplogs.css'))</OriginalItemSpec>

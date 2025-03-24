@@ -37,7 +37,6 @@
 
 
     <div class="sidebar">
-
         <div class="sidebar-item">
             <i class="icon">♛</i>
             <a asp-area="" asp-controller="Home" asp-action="LandingPage">Home</a>
@@ -79,165 +78,164 @@
 
 
     <div class="main-content4">
-    <section class="dashboard">
-        <div class="container">
-            <h2>Trip Logs Management</h2>
-            <button class="btn btn-success" onclick="openModal()">Add Trip Record</button>
-            <br />
-            <ul class="responsive-table">
-                <li class="table-header">
-                    <div class="col col-1">Date</div>
-                    <div class="col col-2">Driver</div>
-                    <div class="col col-3">Broker/Client</div>
-                    <div class="col col-4">Destination</div>
-                    <div class="col col-5">Container No.</div>
-                    <div class="col col-6">BL REF NO.</div>
-                    <div class="col col-7">Status</div>
-                    <div class="col col-8">Cash Advance</div>
-                    <div class="col col-9">Additional Cash Advance</div>
-                    <div class="col col-10">Total Amount</div>
-                    <div class="col col-11">Actions</div>
-                </li>
+        <section class="dashboard">
+            <div class="container">
+                <h2>Trip Logs Management</h2>
+                <div class="button-wrapper">
+                <button class="btn btn-success" onclick="openModal()">Add Trip Record</button>
+                </div>
+                <ul class="responsive-table">
+                    <li class="table-header">
+                        <div class="col col-1">Date</div>
+                        <div class="col col-2">Driver</div>
+                        <div class="col col-3">Broker/Client</div>
+                        <div class="col col-4">Destination</div>
+                        <div class="col col-5">Container No.</div>
+                        <div class="col col-6">BL REF NO.</div>
+                        <div class="col col-7">Status</div>
+                        <div class="col col-8">Cash Advance</div>
+                        <div class="col col-9">Additional Cash Advance</div>
+                        <div class="col col-10">Total Amount</div>
+                        <div class="col col-11">Actions</div>
+                    </li>
 
-                @if (Model != null && Model.Any())
-                {
-                    @foreach (var trip in Model)
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var trip in Model)
+                        {
+                            <li class="table-row">
+                                <div class="col col-1">@trip.Date.ToShortDateString()</div>
+                                <div class="col col-2">@trip.Driver</div>
+                                <div class="col col-3">@trip.BrokerClient</div>
+                                <div class="col col-4">@trip.Destination</div>
+                                <div class="col col-5">@trip.ContainerNo</div>
+                                <div class="col col-6">@trip.BLRefNo</div>
+                                <div class="col col-7">@trip.Status</div>
+                                <div class="col col-8">Php @trip.CashAdvance.ToString("N2")</div>
+                                <div class="col col-9">Php @trip.AdditionalCashAdvance.ToString("N2")</div>
+                                <div class="col col-10"><strong>Php @trip.TotalAmount.ToString("N2")</strong></div>
+                                <div class="col col-11">
+                                    <button class="btn btn-warning" onclick="openEditModal(@trip.TripLogId)">Edit</button>
+                                    <form asp-action="Delete" method="post">
+                                        <input type="hidden" name="id" value="@trip.TripLogId" />
+                                        <button class="btn btn-danger" type="submit">Delete</button>
+                                    </form>
+                                </div>
+                            </li>
+                        }
+                    }
+                    else
                     {
                         <li class="table-row">
-                            <div class="col col-1">@trip.Date.ToShortDateString()</div>
-                            <div class="col col-2">@trip.Driver</div>
-                            <div class="col col-3">@trip.BrokerClient</div>
-                            <div class="col col-4">@trip.Destination</div>
-                            <div class="col col-5">@trip.ContainerNo</div>
-                            <div class="col col-6">@trip.BLRefNo</div>
-                            <div class="col col-7">@trip.Status</div>
-                            <div class="col col-8">Php @trip.CashAdvance.ToString("N2")</div>
-                            <div class="col col-9">Php @trip.AdditionalCashAdvance.ToString("N2")</div>
-                            <div class="col col-10"><strong>Php @trip.TotalAmount.ToString("N2")</strong></div>
-                            <div class="col col-11">
-                                <button class="btn btn-warning" onclick="openEditModal(@trip.TripLogId)">Edit</button>
-                                <form asp-action="Delete" method="post">
-                                    <input type="hidden" name="id" value="@trip.TripLogId" />
-                                    <button class="btn btn-danger" type="submit">Delete</button>
-                                </form>
-                            </div>
-
+                            <div class="col col-12 text-center">No records found.</div>
                         </li>
                     }
+                </ul>
+            </div>
+        </section>
 
-                }
-                else
-                {
-                    <li class="table-row">
-                        <div class="col col-12 text-center">No records found.</div>
-                    </li>
-                }
-            </ul>
-        </div>
-    </section>
+        <div id="addModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Add Trip Log</h3>
+                <form asp-controller="TripLogs" asp-action="Add" method="post">
+                    <div class="form-group">
+                        <label for="tripDate">Date:</label>
+                        <input type="date" id="tripDate" name="Date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="driver">Driver:</label>
+                        <input type="text" id="driver" name="Driver" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="broker">Broker/Client:</label>
+                        <input type="text" id="broker" name="BrokerClient">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination:</label>
+                        <input type="text" id="destination" name="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="containerNo">Container No.:</label>
+                        <input type="text" id="containerNo" name="ContainerNo">
+                    </div>
+                    <div class="form-group">
+                        <label for="blRefNo">BL REF NO.:</label>
+                        <input type="text" id="blRefNo" name="BLRefNo">
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status:</label>
+                        <input type="text" id="status" name="Status">
+                    </div>
+                    <div class="form-group">
+                        <label for="cashAdvance">Cash Advance:</label>
+                        <input type="number" id="cashAdvance" name="CashAdvance" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="additionalCashAdvance">Additional Cash Advance:</label>
+                        <input type="number" id="additionalCashAdvance" name="AdditionalCashAdvance" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="totalAmount">Total Amount:</label>
+                        <input type="number" id="totalAmount" name="TotalAmount" step="0.01" readonly>
+                    </div>
 
-    <div id="addModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Add Trip Log</h3>
-            <form asp-controller="TripLogs" asp-action="Add" method="post">
-                <div class="form-group">
-                    <label for="tripDate">Date:</label>
-                    <input type="date" id="tripDate" name="Date" required>
-                </div>
-                <div class="form-group">
-                    <label for="driver">Driver:</label>
-                    <input type="text" id="driver" name="Driver" required>
-                </div>
-                <div class="form-group">
-                    <label for="broker">Broker/Client:</label>
-                    <input type="text" id="broker" name="BrokerClient">
-                </div>
-                <div class="form-group">
-                    <label for="destination">Destination:</label>
-                    <input type="text" id="destination" name="Destination">
-                </div>
-                <div class="form-group">
-                    <label for="containerNo">Container No.:</label>
-                    <input type="text" id="containerNo" name="ContainerNo">
-                </div>
-                <div class="form-group">
-                    <label for="blRefNo">BL REF NO.:</label>
-                    <input type="text" id="blRefNo" name="BLRefNo">
-                </div>
-                <div class="form-group">
-                    <label for="status">Status:</label>
-                    <input type="text" id="status" name="Status">
-                </div>
-                <div class="form-group">
-                    <label for="cashAdvance">Cash Advance:</label>
-                    <input type="number" id="cashAdvance" name="CashAdvance" step="0.01">
-                </div>
-                <div class="form-group">
-                    <label for="additionalCashAdvance">Additional Cash Advance:</label>
-                    <input type="number" id="additionalCashAdvance" name="AdditionalCashAdvance" step="0.01">
-                </div>
-                <div class="form-group">
-                    <label for="totalAmount">Total Amount:</label>
-                    <input type="number" id="totalAmount" name="TotalAmount" step="0.01" readonly>
-                </div>
-
-                <button class="btn btn-primary" type="submit">Submit</button>
-                <button class="btn btn-danger" type="button" onclick="closeModal()">Cancel</button>
-            </form>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-danger" type="button" onclick="closeModal()">Cancel</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeEditModal()">&times;</span>
-            <h3>Edit Trip Log</h3>
-            <form id="editTripForm" asp-controller="TripLogs" asp-action="Edit" method="post">
-                <input type="hidden" id="editTripLogId" name="TripLogId">
-                <div class="form-group">
-                    <label>Date:</label>
-                    <input type="date" id="editDate" name="Date" required>
-                </div>
-                <div class="form-group">
-                    <label>Driver:</label>
-                    <input type="text" id="editDriver" name="Driver" required>
-                </div>
-                <div class="form-group">
-                    <label>Broker/Client:</label>
-                    <input type="text" id="editBrokerClient" name="BrokerClient">
-                </div>
-                <div class="form-group">
-                    <label>Destination:</label>
-                    <input type="text" id="editDestination" name="Destination">
-                </div>
-                <div class="form-group">
-                    <label>Container No.:</label>
-                    <input type="text" id="editContainerNo" name="ContainerNo">
-                </div>
-                <div class="form-group">
-                    <label>BL REF NO.:</label>
-                    <input type="text" id="editBLRefNo" name="BLRefNo">
-                </div>
-                <div class="form-group">
-                    <label>Status:</label>
-                    <input type="text" id="editStatus" name="Status">
-                </div>
-                <div class="form-group">
-                    <label>Cash Advance:</label>
-                    <input type="number" id="editCashAdvance" name="CashAdvance" step="0.01">
-                </div>
-                <div class="form-group">
-                    <label>Additional Cash Advance:</label>
-                    <input type="number" id="editAdditionalCashAdvance" name="AdditionalCashAdvance" step="0.01">
-                </div>
-                <div class="form-group">
-                    <label>Total Amount:</label>
-                    <input type="number" id="editTotalAmount" name="TotalAmount" step="0.01" readonly>
-                </div>
-                <button type="submit" class="btn btn-primary">Save Changes</button>
-                <button type="button" class="btn btn-danger" onclick="closeEditModal()">Cancel</button>
-            </form>
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeEditModal()">&times;</span>
+                <h3>Edit Trip Log</h3>
+                <form id="editTripForm" asp-controller="TripLogs" asp-action="Edit" method="post">
+                    <input type="hidden" id="editTripLogId" name="TripLogId">
+                    <div class="form-group">
+                        <label>Date:</label>
+                        <input type="date" id="editDate" name="Date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Driver:</label>
+                        <input type="text" id="editDriver" name="Driver" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Broker/Client:</label>
+                        <input type="text" id="editBrokerClient" name="BrokerClient">
+                    </div>
+                    <div class="form-group">
+                        <label>Destination:</label>
+                        <input type="text" id="editDestination" name="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label>Container No.:</label>
+                        <input type="text" id="editContainerNo" name="ContainerNo">
+                    </div>
+                    <div class="form-group">
+                        <label>BL REF NO.:</label>
+                        <input type="text" id="editBLRefNo" name="BLRefNo">
+                    </div>
+                    <div class="form-group">
+                        <label>Status:</label>
+                        <input type="text" id="editStatus" name="Status">
+                    </div>
+                    <div class="form-group">
+                        <label>Cash Advance:</label>
+                        <input type="number" id="editCashAdvance" name="CashAdvance" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Additional Cash Advance:</label>
+                        <input type="number" id="editAdditionalCashAdvance" name="AdditionalCashAdvance" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Total Amount:</label>
+                        <input type="number" id="editTotalAmount" name="TotalAmount" step="0.01" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-danger" onclick="closeEditModal()">Cancel</button>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
 </body>
 </html>

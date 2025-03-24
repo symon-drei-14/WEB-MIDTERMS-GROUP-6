@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Web Midterms Grp6")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21fbd7a3a96a3375d581f802d9e2369da227ee66")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75eba79040f6c941a58f8f991fd2e7e6d105ae57")]
 [assembly: System.Reflection.AssemblyProductAttribute("Web Midterms Grp6")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Web Midterms Grp6")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
