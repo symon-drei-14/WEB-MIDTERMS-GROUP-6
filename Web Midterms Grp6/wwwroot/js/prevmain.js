@@ -243,3 +243,101 @@ function closeReminderModal() {
 document.addEventListener('DOMContentLoaded', function () {
     updateTable();
 });
+
+function editRecord(maintenanceId) {
+    const row = document.querySelector(`[data-maintenance-id="${maintenanceId}"]`);
+
+    // Populate edit modal with current record details
+    document.getElementById("editMaintenanceId").value = maintenanceId;
+    document.getElementById("editTruckId").value = row.querySelector('.col-2').textContent;
+    document.getElementById("editLicensePlate").value = row.querySelector('.col-3').textContent;
+
+    // Convert date format
+    const dateString = row.querySelector('.col-4').textContent;
+    document.getElementById("editDateOfInspection").value = dateString;
+
+    document.getElementById("editRemarks").value = row.querySelector('.col-5').textContent;
+    document.getElementById("editStatus").value = row.querySelector('.col-6').textContent;
+    document.getElementById("editSupplier").value = row.querySelector('.col-7').textContent;
+
+    // Remove "Php" from cost
+    const cost = row.querySelector('.col-8').textContent.replace('Php', '');
+    document.getElementById("editCost").value = cost;
+
+    // Show edit modal
+    document.getElementById("editModal").style.display = "flex";
+}
+
+function updateRecord() {
+    const maintenanceId = parseInt(document.getElementById("editMaintenanceId").value);
+    const truckId = document.getElementById("editTruckId").value.trim();
+    const licensePlate = document.getElementById("editLicensePlate").value.trim();
+    const dateOfInspection = document.getElementById("editDateOfInspection").value.trim();
+    const remarks = document.getElementById("editRemarks").value.trim();
+    const status = document.getElementById("editStatus").value.trim();
+    const supplier = document.getElementById("editSupplier").value.trim();
+    const cost = document.getElementById("editCost").value.trim();
+
+    if (!maintenanceId || !truckId || !licensePlate || !dateOfInspection || !remarks || !status || !supplier || !cost) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    const updatedEntry = {
+        maintenanceId: maintenanceId,
+        truckId: truckId,
+        licensePlate: licensePlate,
+        dateOfInspection: dateOfInspection,
+        remarks: remarks,
+        status: status,
+        supplier: supplier,
+        cost: parseFloat(cost)
+    };
+
+    fetch('/PreventiveMaintenance/UpdateRecord', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedEntry)
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                closeEditModal();
+                window.location.reload();
+            } else {
+                alert("Error updating record: " + (data.errors || "Unknown error"));
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("An error occurred while updating the record.");
+        });
+}
+
+function deleteRecord(maintenanceId) {
+    if (!confirm("Are you sure you want to delete this maintenance record?")) {
+        return;
+    }
+
+    fetch(`/PreventiveMaintenance/DeleteRecord?maintenanceId=${maintenanceId}`, {
+        method: 'POST'
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.reload();
+            } else {
+                alert("Error deleting record: " + (data.errors || "Unknown error"));
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("An error occurred while deleting the record.");
+        });
+}
+
+function closeEditModal() {
+    document.getElementById("editModal").style.display = "none";
+}

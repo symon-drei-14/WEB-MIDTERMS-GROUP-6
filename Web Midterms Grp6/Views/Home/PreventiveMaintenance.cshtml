@@ -81,56 +81,90 @@
 
 
     <div class="main-content3">
-    <section class="dashboard">
-        <div class="container">
-            <h2>Preventive Maintenance Scheduling</h2>
+        <section class="dashboard">
+            <div class="container">
+                <h2> Preventive Maintenance Scheduling</h2>
                 <div class="button-row">
-                    <button class="btn btn-first" onclick="openModal()">Add Maintenance Schedule</button>
-                    <button class="btn btn-secondary" onclick="openHistoryModal()">View Maintenance History</button>
-                    <button class="btn btn-third" onclick="checkReminders()">Maintenance Reminders</button>
+                    <button class="btn btn-first" onclick="openModal()"> Add Maintenance Schedule</button>
+                    <button class="btn btn-secondary" onclick="openHistoryModal()"> View Maintenance History</button>
+                    <button class="btn btn-third" onclick="checkReminders()"> Maintenance Reminders</button>
                 </div>
-            <br />
-            <ul class="responsive-table" id="maintenanceTable">
-                <li class="table-header">
-                    <div class="col col-1">Maintenance ID</div>
-                    <div class="col col-2">Truck ID</div>
-                    <div class="col col-3">License Plate</div>
-                    <div class="col col-4">Date of Inspection</div>
-                    <div class="col col-5">Remarks</div>
-                    <div class="col col-6">Status</div>
-                    <div class="col col-7">Supplier</div>
-                    <div class="col col-8">Cost</div>
-                </li>
-                @if (Model != null)
-                {
-                    @foreach (var item in Model)
-                    {
-                        <li class="table-row">
-                            <div class="col col-1" data-label="Maintenance ID">@item.MaintenanceId</div>
-                            <div class="col col-2" data-label="Truck ID">@item.TruckId</div>
-                            <div class="col col-3" data-label="License Plate">@item.LicensePlate</div>
-                            <div class="col col-4" data-label="Date of Inspection">@item.DateOfInspection.ToString("yyyy-MM-dd")</div>
-                            <div class="col col-5" data-label="Remarks">@item.Remarks</div>
-                            <div class="col col-6" data-label="Status">@item.Status</div>
-                            <div class="col col-7" data-label="Supplier">@item.Supplier</div>
-                            <div class="col col-8" data-label="Cost">Php@(item.Cost)</div>
-                        </li>
-                    }
-                }
-                else
-                {
-                    <li class="table-row">
-                        <div class="col col-1" colspan="8">No maintenance records found.</div>
+                <br />
+                <ul class="responsive-table" id="maintenanceTable">
+                    <li class="table-header">
+                        <div class="col col-1"> Maintenance ID</div>
+                        <div class="col col-2"> Truck ID</div>
+                        <div class="col col-3"> License Plate</div>
+                        <div class="col col-4"> Date of Inspection</div>
+                        <div class="col col-5"> Remarks</div>
+                        <div class="col col-6"> Status</div>
+                        <div class="col col-7"> Supplier</div>
+                        <div class="col col-8"> Cost</div>
+                        <div class="col col-9"> Actions</div>
                     </li>
-                }
-            </ul>
-            <div class="pagination">
-                <button onclick="prevPage()" id="prevBtn" disabled>Previous</button>
-                <span id="pageNumber">Page 1</span>
-                <button onclick="nextPage()" id="nextBtn">Next</button>
+                    @if (Model != null)
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <li class="table-row" data-maintenance-id="@item.MaintenanceId"> <div class="col col-1" data-label="Maintenance ID">@item.MaintenanceId</div> <div class="col col-2" data-label="Truck ID">@item.TruckId</div> <div class="col col-3" data-label="License Plate">@item.LicensePlate</div> <div class="col col-4" data-label="Date of Inspection">@item.DateOfInspection.ToString("yyyy-MM-dd")</div> <div class="col col-5" data-label="Remarks">@item.Remarks</div> <div class="col col-6" data-label="Status">@item.Status</div> <div class="col col-7" data-label="Supplier">@item.Supplier</div> <div class="col col-8" data-label="Cost">Php@(item.Cost)</div> <div class="col col-9" data-label="Actions"> <button class="btn btn-edit" onclick="editRecord(@item.MaintenanceId)">Edit</button> <button class="btn btn-delete" onclick="deleteRecord(@item.MaintenanceId)">Delete</button> </div> </li>
+                        }
+                    }
+
+                    else
+                    {
+                        <li class="table-row"> <div class="col col-1" colspan="9">No maintenance records found.</div> </li>
+                    }
+
+                </ul>
+                <div class="pagination">
+                    <button onclick="prevPage()" id="prevBtn" disabled> Previous</button>
+                    <span id="pageNumber"> Page 1</span>
+                    <button onclick="nextPage()" id="nextBtn"> Next</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Edit Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeEditModal()"> &times;</span>
+                <h3> Edit Maintenance Record</h3>
+                <input type="hidden" id="editMaintenanceId">
+                <div class="form-group">
+                    <label for="editTruckId"> Truck ID:</label>
+                    <input type="text" id="editTruckId">
+                </div>
+                <div class="form-group">
+                    <label for="editLicensePlate"> License Plate:</label>
+                    <input type="text" id="editLicensePlate">
+                </div>
+                <div class="form-group">
+                    <label for="editDateOfInspection"> Date of Inspection:</label>
+                    <input type="date" id="editDateOfInspection">
+                </div>
+                <div class="form-group">
+                    <label for="editRemarks"> Remarks:</label>
+                    <input type="text" id="editRemarks">
+                </div>
+                <div class="form-group">
+                    <label for="editStatus"> Status:</label>
+                    <input type="text" id="editStatus">
+                </div>
+                <div class="form-group">
+                    <label for="editSupplier"> Supplier:</label>
+                    <input type="text" id="editSupplier">
+                </div>
+                <div class="form-group">
+                    <label for="editCost"> Cost:</label>
+                    <input type="number" id="editCost">
+                </div>
+
+                <div class="button-container">
+                    <button class="btn btn-primary" onclick="updateRecord()"> Update</button>
+                    <button class="btn btn-danger" onclick="closeEditModal()"> Cancel</button>
+                </div>
             </div>
         </div>
-    </section>
 
     <!-- Add Modal -->
     <div id="addModal" class="modal">
@@ -216,6 +250,7 @@
             });
         </script>
         <script src="~/js/prevmain.js"></script>
+
     }
 </body>
 </html>

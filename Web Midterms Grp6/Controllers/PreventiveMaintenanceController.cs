@@ -93,4 +93,40 @@ public class PreventiveMaintenanceController : Controller
 
         return Json(upcomingMaintenance);
     }
+
+    [HttpPost]
+    public IActionResult UpdateRecord([FromBody] MaintenanceRecord record)
+    {
+        var existingRecord = _maintenanceRecords.FirstOrDefault(r => r.MaintenanceId == record.MaintenanceId);
+
+        if (existingRecord == null)
+        {
+            return Json(new { success = false, errors = "Record not found" });
+        }
+
+        // Update all properties
+        existingRecord.TruckId = record.TruckId;
+        existingRecord.LicensePlate = record.LicensePlate;
+        existingRecord.DateOfInspection = record.DateOfInspection;
+        existingRecord.Remarks = record.Remarks;
+        existingRecord.Status = record.Status;
+        existingRecord.Supplier = record.Supplier;
+        existingRecord.Cost = record.Cost;
+
+        return Json(new { success = true });
+    }
+
+    [HttpPost]
+    public IActionResult DeleteRecord(int maintenanceId)
+    {
+        var recordToRemove = _maintenanceRecords.FirstOrDefault(r => r.MaintenanceId == maintenanceId);
+
+        if (recordToRemove == null)
+        {
+            return Json(new { success = false, errors = "Record not found" });
+        }
+
+        _maintenanceRecords.Remove(recordToRemove);
+        return Json(new { success = true });
+    }
 }

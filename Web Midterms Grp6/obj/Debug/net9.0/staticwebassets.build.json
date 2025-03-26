@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bXRj2MTU8qbjk2YSCqAN2AoIPxF3IcPC8ypfwWedQ6s=",
+  "Hash": "JdwnN1SOxG86uyvanYa+0akLAg69i1vz+KC35Q54rRM=",
   "Source": "Web Midterms Grp6",
   "BasePath": "_content/Web Midterms Grp6",
   "Mode": "Default",
@@ -206,12 +206,12 @@
       "OriginalItemSpec": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-qb7l1mv1d2.gz",
+      "Identity": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-pi3tyohab8.gz",
       "SourceId": "Web Midterms Grp6",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Web Midterms Grp6",
-      "RelativePath": "css/prevmain#[.{fingerprint=qb7l1mv1d2}]?.css.gz",
+      "RelativePath": "css/prevmain#[.{fingerprint=pi3tyohab8}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -220,8 +220,8 @@
       "RelatedAsset": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\prevmain.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ir20kcvuty",
-      "Integrity": "Aj4c+iav6qvZbdambn9ZLYiaIZC5kXmGnOKTZ8cmunM=",
+      "Fingerprint": "albhopi54p",
+      "Integrity": "Ei9kTBAJwC3WdP+CBLt0yp402YIpOzLZmPQgYJzVTrQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\prevmain.css"
@@ -689,12 +689,12 @@
       "OriginalItemSpec": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-lgayg0w4a2.gz",
+      "Identity": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-fjy8b8bn57.gz",
       "SourceId": "Web Midterms Grp6",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Web Midterms Grp6",
-      "RelativePath": "js/prevmain#[.{fingerprint=lgayg0w4a2}]?.js.gz",
+      "RelativePath": "js/prevmain#[.{fingerprint=fjy8b8bn57}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -703,8 +703,8 @@
       "RelatedAsset": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\prevmain.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "7x3oju44wo",
-      "Integrity": "JWsTy8C4DRzYJ+HOWF4NFjSpn4SzVE34GpK6qddTo6I=",
+      "Fingerprint": "m4284mihfk",
+      "Integrity": "xrgmhEeU6ENiNbcStWbxSS07tehJ5MSawAPA4oe5bFc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\prevmain.js"
@@ -1753,8 +1753,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "qb7l1mv1d2",
-      "Integrity": "VgHJn7+tUI0FrJIkR74ITppd5NfPwyJ5HEecvNRY/Uc=",
+      "Fingerprint": "pi3tyohab8",
+      "Integrity": "7/ZqAXpmfnHcegMhP/9lBy6fn80mFNPShbTvMq0hc9E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\prevmain.css"
@@ -2005,8 +2005,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lgayg0w4a2",
-      "Integrity": "i4awfZYg7Dr6U+JMQjrIz+WI/DilZZY6PIHlVLH8lX8=",
+      "Fingerprint": "fjy8b8bn57",
+      "Integrity": "29vD6cwxROhRiG1ftiBcuQKp9jlzUAySDUDJgF1Okw8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\prevmain.js"
@@ -4234,7 +4234,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:10:20 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4295,7 +4295,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:10:20 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4340,7 +4340,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:10:20 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4395,7 +4395,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:10:20 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4448,7 +4448,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:10:20 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4485,7 +4485,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:10:20 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4509,12 +4509,12 @@
     },
     {
       "Route": "css/prevmain.css",
-      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-qb7l1mv1d2.gz",
+      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-pi3tyohab8.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000790513834"
+          "Quality": "0.000632911392"
         }
       ],
       "ResponseHeaders": [
@@ -4524,15 +4524,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1264"
+          "Value": "1579"
         },
         {
           "Name": "ETag",
-          "Value": "\"Aj4c+iav6qvZbdambn9ZLYiaIZC5kXmGnOKTZ8cmunM=\""
+          "Value": "\"Ei9kTBAJwC3WdP+CBLt0yp402YIpOzLZmPQgYJzVTrQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 14:19:26 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4552,13 +4552,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"VgHJn7+tUI0FrJIkR74ITppd5NfPwyJ5HEecvNRY/Uc=\""
+          "Value": "W/\"7/ZqAXpmfnHcegMhP/9lBy6fn80mFNPShbTvMq0hc9E=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VgHJn7+tUI0FrJIkR74ITppd5NfPwyJ5HEecvNRY/Uc="
+          "Value": "sha256-7/ZqAXpmfnHcegMhP/9lBy6fn80mFNPShbTvMq0hc9E="
         }
       ]
     },
@@ -4573,7 +4573,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4855"
+          "Value": "6472"
         },
         {
           "Name": "Content-Type",
@@ -4581,11 +4581,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VgHJn7+tUI0FrJIkR74ITppd5NfPwyJ5HEecvNRY/Uc=\""
+          "Value": "\"7/ZqAXpmfnHcegMhP/9lBy6fn80mFNPShbTvMq0hc9E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 14:19:26 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4595,13 +4595,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VgHJn7+tUI0FrJIkR74ITppd5NfPwyJ5HEecvNRY/Uc="
+          "Value": "sha256-7/ZqAXpmfnHcegMhP/9lBy6fn80mFNPShbTvMq0hc9E="
         }
       ]
     },
     {
       "Route": "css/prevmain.css.gz",
-      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-qb7l1mv1d2.gz",
+      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-pi3tyohab8.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4610,7 +4610,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1264"
+          "Value": "1579"
         },
         {
           "Name": "Content-Type",
@@ -4618,11 +4618,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Aj4c+iav6qvZbdambn9ZLYiaIZC5kXmGnOKTZ8cmunM=\""
+          "Value": "\"Ei9kTBAJwC3WdP+CBLt0yp402YIpOzLZmPQgYJzVTrQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 14:19:26 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4640,18 +4640,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Aj4c+iav6qvZbdambn9ZLYiaIZC5kXmGnOKTZ8cmunM="
+          "Value": "sha256-Ei9kTBAJwC3WdP+CBLt0yp402YIpOzLZmPQgYJzVTrQ="
         }
       ]
     },
     {
-      "Route": "css/prevmain.qb7l1mv1d2.css",
-      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-qb7l1mv1d2.gz",
+      "Route": "css/prevmain.pi3tyohab8.css",
+      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-pi3tyohab8.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000790513834"
+          "Quality": "0.000632911392"
         }
       ],
       "ResponseHeaders": [
@@ -4661,15 +4661,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1264"
+          "Value": "1579"
         },
         {
           "Name": "ETag",
-          "Value": "\"Aj4c+iav6qvZbdambn9ZLYiaIZC5kXmGnOKTZ8cmunM=\""
+          "Value": "\"Ei9kTBAJwC3WdP+CBLt0yp402YIpOzLZmPQgYJzVTrQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 14:19:26 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4689,13 +4689,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"VgHJn7+tUI0FrJIkR74ITppd5NfPwyJ5HEecvNRY/Uc=\""
+          "Value": "W/\"7/ZqAXpmfnHcegMhP/9lBy6fn80mFNPShbTvMq0hc9E=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qb7l1mv1d2"
+          "Value": "pi3tyohab8"
         },
         {
           "Name": "label",
@@ -4703,12 +4703,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VgHJn7+tUI0FrJIkR74ITppd5NfPwyJ5HEecvNRY/Uc="
+          "Value": "sha256-7/ZqAXpmfnHcegMhP/9lBy6fn80mFNPShbTvMq0hc9E="
         }
       ]
     },
     {
-      "Route": "css/prevmain.qb7l1mv1d2.css",
+      "Route": "css/prevmain.pi3tyohab8.css",
       "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\css\\prevmain.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4718,7 +4718,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4855"
+          "Value": "6472"
         },
         {
           "Name": "Content-Type",
@@ -4726,11 +4726,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VgHJn7+tUI0FrJIkR74ITppd5NfPwyJ5HEecvNRY/Uc=\""
+          "Value": "\"7/ZqAXpmfnHcegMhP/9lBy6fn80mFNPShbTvMq0hc9E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 14:19:26 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4740,7 +4740,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qb7l1mv1d2"
+          "Value": "pi3tyohab8"
         },
         {
           "Name": "label",
@@ -4748,13 +4748,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VgHJn7+tUI0FrJIkR74ITppd5NfPwyJ5HEecvNRY/Uc="
+          "Value": "sha256-7/ZqAXpmfnHcegMhP/9lBy6fn80mFNPShbTvMq0hc9E="
         }
       ]
     },
     {
-      "Route": "css/prevmain.qb7l1mv1d2.css.gz",
-      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-qb7l1mv1d2.gz",
+      "Route": "css/prevmain.pi3tyohab8.css.gz",
+      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\2gmwr11r1u-pi3tyohab8.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4763,7 +4763,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1264"
+          "Value": "1579"
         },
         {
           "Name": "Content-Type",
@@ -4771,11 +4771,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Aj4c+iav6qvZbdambn9ZLYiaIZC5kXmGnOKTZ8cmunM=\""
+          "Value": "\"Ei9kTBAJwC3WdP+CBLt0yp402YIpOzLZmPQgYJzVTrQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 14:19:26 GMT"
+          "Value": "Wed, 26 Mar 2025 12:15:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4793,7 +4793,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qb7l1mv1d2"
+          "Value": "pi3tyohab8"
         },
         {
           "Name": "label",
@@ -4801,7 +4801,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Aj4c+iav6qvZbdambn9ZLYiaIZC5kXmGnOKTZ8cmunM="
+          "Value": "sha256-Ei9kTBAJwC3WdP+CBLt0yp402YIpOzLZmPQgYJzVTrQ="
         }
       ]
     },
@@ -5426,7 +5426,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:11:42 GMT"
+          "Value": "Mon, 24 Mar 2025 16:12:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5487,7 +5487,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:11:42 GMT"
+          "Value": "Mon, 24 Mar 2025 16:12:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5532,7 +5532,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:11:42 GMT"
+          "Value": "Mon, 24 Mar 2025 16:12:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5587,7 +5587,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:11:42 GMT"
+          "Value": "Mon, 24 Mar 2025 16:12:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5640,7 +5640,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:11:42 GMT"
+          "Value": "Mon, 24 Mar 2025 16:12:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5677,7 +5677,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 16:11:42 GMT"
+          "Value": "Mon, 24 Mar 2025 16:12:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7220,13 +7220,13 @@
       ]
     },
     {
-      "Route": "js/prevmain.js",
-      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-lgayg0w4a2.gz",
+      "Route": "js/prevmain.fjy8b8bn57.js",
+      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-fjy8b8bn57.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000454545455"
+          "Quality": "0.000369139904"
         }
       ],
       "ResponseHeaders": [
@@ -7236,19 +7236,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2199"
+          "Value": "2708"
         },
         {
           "Name": "ETag",
-          "Value": "\"JWsTy8C4DRzYJ+HOWF4NFjSpn4SzVE34GpK6qddTo6I=\""
+          "Value": "\"xrgmhEeU6ENiNbcStWbxSS07tehJ5MSawAPA4oe5bFc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 11:17:34 GMT"
+          "Value": "Wed, 26 Mar 2025 12:13:41 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -7264,18 +7264,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"i4awfZYg7Dr6U+JMQjrIz+WI/DilZZY6PIHlVLH8lX8=\""
+          "Value": "W/\"29vD6cwxROhRiG1ftiBcuQKp9jlzUAySDUDJgF1Okw8=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "fjy8b8bn57"
+        },
+        {
+          "Name": "label",
+          "Value": "js/prevmain.js"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-i4awfZYg7Dr6U+JMQjrIz+WI/DilZZY6PIHlVLH8lX8="
+          "Value": "sha256-29vD6cwxROhRiG1ftiBcuQKp9jlzUAySDUDJgF1Okw8="
         }
       ]
     },
     {
-      "Route": "js/prevmain.js",
+      "Route": "js/prevmain.fjy8b8bn57.js",
       "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\prevmain.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7285,7 +7293,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9159"
+          "Value": "12949"
         },
         {
           "Name": "Content-Type",
@@ -7293,121 +7301,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"i4awfZYg7Dr6U+JMQjrIz+WI/DilZZY6PIHlVLH8lX8=\""
+          "Value": "\"29vD6cwxROhRiG1ftiBcuQKp9jlzUAySDUDJgF1Okw8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 11:17:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-i4awfZYg7Dr6U+JMQjrIz+WI/DilZZY6PIHlVLH8lX8="
-        }
-      ]
-    },
-    {
-      "Route": "js/prevmain.js.gz",
-      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-lgayg0w4a2.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2199"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JWsTy8C4DRzYJ+HOWF4NFjSpn4SzVE34GpK6qddTo6I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 11:17:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JWsTy8C4DRzYJ+HOWF4NFjSpn4SzVE34GpK6qddTo6I="
-        }
-      ]
-    },
-    {
-      "Route": "js/prevmain.lgayg0w4a2.js",
-      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-lgayg0w4a2.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000454545455"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2199"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JWsTy8C4DRzYJ+HOWF4NFjSpn4SzVE34GpK6qddTo6I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 11:17:34 GMT"
+          "Value": "Wed, 26 Mar 2025 12:13:41 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"i4awfZYg7Dr6U+JMQjrIz+WI/DilZZY6PIHlVLH8lX8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lgayg0w4a2"
+          "Value": "fjy8b8bn57"
         },
         {
           "Name": "label",
@@ -7415,13 +7323,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-i4awfZYg7Dr6U+JMQjrIz+WI/DilZZY6PIHlVLH8lX8="
+          "Value": "sha256-29vD6cwxROhRiG1ftiBcuQKp9jlzUAySDUDJgF1Okw8="
         }
       ]
     },
     {
-      "Route": "js/prevmain.lgayg0w4a2.js",
-      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\prevmain.js",
+      "Route": "js/prevmain.fjy8b8bn57.js.gz",
+      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-fjy8b8bn57.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7430,7 +7338,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9159"
+          "Value": "2708"
         },
         {
           "Name": "Content-Type",
@@ -7438,56 +7346,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"i4awfZYg7Dr6U+JMQjrIz+WI/DilZZY6PIHlVLH8lX8=\""
+          "Value": "\"xrgmhEeU6ENiNbcStWbxSS07tehJ5MSawAPA4oe5bFc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 11:17:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lgayg0w4a2"
-        },
-        {
-          "Name": "label",
-          "Value": "js/prevmain.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-i4awfZYg7Dr6U+JMQjrIz+WI/DilZZY6PIHlVLH8lX8="
-        }
-      ]
-    },
-    {
-      "Route": "js/prevmain.lgayg0w4a2.js.gz",
-      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-lgayg0w4a2.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2199"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JWsTy8C4DRzYJ+HOWF4NFjSpn4SzVE34GpK6qddTo6I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 11:17:34 GMT"
+          "Value": "Wed, 26 Mar 2025 12:13:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7505,7 +7368,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lgayg0w4a2"
+          "Value": "fjy8b8bn57"
         },
         {
           "Name": "label",
@@ -7513,7 +7376,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JWsTy8C4DRzYJ+HOWF4NFjSpn4SzVE34GpK6qddTo6I="
+          "Value": "sha256-xrgmhEeU6ENiNbcStWbxSS07tehJ5MSawAPA4oe5bFc="
+        }
+      ]
+    },
+    {
+      "Route": "js/prevmain.js",
+      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-fjy8b8bn57.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000369139904"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2708"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xrgmhEeU6ENiNbcStWbxSS07tehJ5MSawAPA4oe5bFc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 12:13:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"29vD6cwxROhRiG1ftiBcuQKp9jlzUAySDUDJgF1Okw8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-29vD6cwxROhRiG1ftiBcuQKp9jlzUAySDUDJgF1Okw8="
+        }
+      ]
+    },
+    {
+      "Route": "js/prevmain.js",
+      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\wwwroot\\js\\prevmain.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12949"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"29vD6cwxROhRiG1ftiBcuQKp9jlzUAySDUDJgF1Okw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 12:13:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-29vD6cwxROhRiG1ftiBcuQKp9jlzUAySDUDJgF1Okw8="
+        }
+      ]
+    },
+    {
+      "Route": "js/prevmain.js.gz",
+      "AssetFile": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\obj\\Debug\\net9.0\\compressed\\etugh3gxde-fjy8b8bn57.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2708"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xrgmhEeU6ENiNbcStWbxSS07tehJ5MSawAPA4oe5bFc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 12:13:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xrgmhEeU6ENiNbcStWbxSS07tehJ5MSawAPA4oe5bFc="
         }
       ]
     },
