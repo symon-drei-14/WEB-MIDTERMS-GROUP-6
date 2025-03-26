@@ -160,13 +160,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\fleetmanagement.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ji1ltsqaoj"},{"Name":"integrity","Value":"sha256-FbjFFwT0Gs\u002Bo/E2nEsiwM3BW4P\u002ByDFsjrnpYWiR9YbE="},{"Name":"label","Value":"_content/Web Midterms Grp6/js/fleetmanagement.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8227"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022FbjFFwT0Gs\u002Bo/E2nEsiwM3BW4P\u002ByDFsjrnpYWiR9YbE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Mar 2025 14:33:18 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8227"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022FbjFFwT0Gs\u002Bo/E2nEsiwM3BW4P\u002ByDFsjrnpYWiR9YbE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Mar 2025 14:33:58 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/js/fleetmanagement.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\fleetmanagement.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-FbjFFwT0Gs\u002Bo/E2nEsiwM3BW4P\u002ByDFsjrnpYWiR9YbE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"8227"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022FbjFFwT0Gs\u002Bo/E2nEsiwM3BW4P\u002ByDFsjrnpYWiR9YbE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Mar 2025 14:33:18 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"8227"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022FbjFFwT0Gs\u002Bo/E2nEsiwM3BW4P\u002ByDFsjrnpYWiR9YbE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Mar 2025 14:33:58 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web Midterms Grp6/js/landingpage.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\landingpage.js'))</AssetFile>
