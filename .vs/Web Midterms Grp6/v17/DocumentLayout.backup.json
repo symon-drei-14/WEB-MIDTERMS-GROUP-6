@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
               "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
               "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAAAAABAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAAAPgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-26T14:35:15.383Z",
               "EditorCaption": ""
@@ -119,8 +119,7 @@
               "RelativeToolTip": "Web Midterms Grp6\\wwwroot\\js\\fleetmanagement.js",
               "ViewState": "AgIAAJ8AAAAAAAAAAAAowKoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-26T13:14:13.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T13:14:13.719Z"
             },
             {
               "$type": "Document",
