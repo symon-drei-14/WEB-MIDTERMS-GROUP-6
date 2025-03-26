@@ -73,7 +73,7 @@
     width: 80px;
     height: 100%;
     background-color: #edf1ed;
-    color: #161616;
+    color: #161616 !important;
     padding: 20px;
     box-sizing: border-box;
     transition: width 0.3s ease;
@@ -114,6 +114,7 @@
 
 .icon {
     margin-right: 10px;
+    color: black !important;
 }
 
 .sidebar-item span {

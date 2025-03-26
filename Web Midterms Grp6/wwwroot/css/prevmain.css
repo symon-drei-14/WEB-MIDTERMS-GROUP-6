@@ -8,7 +8,7 @@
 .container {
     max-width: 100%;
     height: auto; /* Don't restrict height */
-    min-height: 1050px;
+    min-height: 800px;
     padding: 10px;
     overflow: hidden;
 }
@@ -22,7 +22,7 @@
 .responsive-table {
     display: flex;
     flex-direction: column;
-    width: 100%; /* Make table full-width */
+    width: 90%; /* Make table full-width */
     max-height: none; /* Remove any height restrictions */
     overflow: visible; /* Ensure content is fully visible */
 }
