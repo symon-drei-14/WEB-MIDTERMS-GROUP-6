@@ -8,7 +8,7 @@
 .container {
     max-width: 100%;
     height: auto; /* Don't restrict height */
-    min-height: 800px;
+    min-height: 850px;
     padding: 10px;
     overflow: hidden;
 }
@@ -40,7 +40,10 @@
 
 .table-header {
     background-color: #70b2ff;
-    font-size: 14px;
+    font-size: 13px;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break */
+    text-align: center; /* Keep text centered */
     text-transform: uppercase;
     letter-spacing: 0.03em;
     padding: 15px 30px;

@@ -162,11 +162,16 @@
         var vehicle = document.getElementById("vehicle-name").textContent;
         var damageType = document.getElementById("damage-type").value;
         var damageDescription = document.getElementById("damage-description").value.trim();
-        var driver = document.querySelector("#damage-form select[name='driver']").value;
+        var driver = document.querySelector("#damage-form select[name='driver_damage']").value;
 
         if (damageDescription && damageType && driver) {
-            // In a real app, you would send this data to the server
-            alert("Damage Report Sent!");
+            // Create a detailed alert message
+            alert(`Damage Report Submitted Successfully!
+
+Vehicle: ${vehicle}
+Damage Type: ${damageType}
+Description: ${damageDescription}
+Reported by: ${driver}`);
 
             // Update damaged vehicle count (visual only)
             var currentCount = parseInt(damagedVehiclesCounter.textContent);
@@ -178,6 +183,7 @@
             alert("Please fill in all required fields before submitting.");
         }
     });
+
 
     // Close modal if clicked outside (only if event.target is an open modal)
     window.onclick = function (event) {

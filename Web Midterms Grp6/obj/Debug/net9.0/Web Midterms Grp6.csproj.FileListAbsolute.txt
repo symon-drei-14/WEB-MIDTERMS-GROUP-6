@@ -102,10 +102,10 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\bf6zztx0b0-klplyr7siv.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\31sm8zss4c-f39be8twlb.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\9cnst5ewa8-6e7pvnkuix.gz
-C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\j3jbt6un5j-9yvl1lb838.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\pw2p2vkwib-ytb0kp4m93.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\ms0zkstvy7-cbm6fc7gzk.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\ic6pt7bx2l-6mkvqj884j.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\etugh3gxde-fjy8b8bn57.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\c341250vmh-nyplk6jlvz.gz
-C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\2gmwr11r1u-385o0stmoh.gz
+C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\2gmwr11r1u-c4gxcrjdss.gz
+C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\j3jbt6un5j-ji1ltsqaoj.gz
