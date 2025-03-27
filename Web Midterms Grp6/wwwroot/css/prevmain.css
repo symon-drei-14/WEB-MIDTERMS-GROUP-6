@@ -1,8 +1,7 @@
-﻿body {
+﻿﻿body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-
 }
 
 .container {
@@ -96,8 +95,9 @@
             font-weight: bold;
         }
 }
+
 .col-9 {
-/*    flex: 0.8;*/
+    /*    flex: 0.8;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,6 +130,7 @@
         .col-9 .btn-danger:hover {
             background-color: #c0392b;
         }
+
 .table-header, .table-row {
     display: flex;
     align-items: center;
@@ -199,6 +200,7 @@
     background-color: #28a745;
     color: white;
 }
+
 .btn-first {
     background-color: #28a745;
     color: white;
