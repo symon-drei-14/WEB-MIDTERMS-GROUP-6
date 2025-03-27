@@ -130,7 +130,6 @@ function openHistoryModal() {
 function closeHistoryModal() {
     document.getElementById("historyModal").style.display = "none";
 }
-
 function showHistory() {
     let selectedTruck = document.getElementById("historyTruckId").value;
     let historyList = document.getElementById("historyList");
@@ -157,11 +156,12 @@ function showHistory() {
                     <li class="table-header">
                         <div class="col col-1">Maintenance ID</div>
                         <div class="col col-2">Truck ID</div>
-                        <div class="col col-3">Date of Inspection</div>
-                        <div class="col col-4">Remarks</div>
-                        <div class="col col-5">Status</div>
-                        <div class="col col-6">Supplier</div>
-                        <div class="col col-7">Cost</div>
+                        <div class="col col-3">License Plate</div>
+                        <div class="col col-4">Date of Inspection</div>
+                        <div class="col col-5">Remarks</div>
+                        <div class="col col-6">Status</div>
+                        <div class="col col-7">Supplier</div>
+                        <div class="col col-8">Cost</div>
                     </li>
                 `;
 
@@ -170,13 +170,14 @@ function showHistory() {
                     let li = document.createElement("li");
                     li.className = "table-row";
                     li.innerHTML = `
-                        <div class="col col-1">${item.maintenanceId}</div>
-                        <div class="col col-2">${item.truckId}</div>
-                        <div class="col col-3">${new Date(item.dateOfInspection).toISOString().split('T')[0]}</div>
-                        <div class="col col-4">${item.remarks}</div>
-                        <div class="col col-5">${item.status}</div>
-                        <div class="col col-6">${item.supplier}</div>
-                        <div class="col col-7">Php${item.cost}</div>
+                        <div class="col col-1" data-label="Maintenance ID">${item.maintenanceId}</div>
+                        <div class="col col-2" data-label="Truck ID">${item.truckId}</div>
+                        <div class="col col-3" data-label="License Plate">${item.licensePlate}</div>
+                        <div class="col col-4" data-label="Date of Inspection">${new Date(item.dateOfInspection).toISOString().split('T')[0]}</div>
+                        <div class="col col-5" data-label="Remarks">${item.remarks}</div>
+                        <div class="col col-6" data-label="Status">${item.status}</div>
+                        <div class="col col-7" data-label="Supplier">${item.supplier}</div>
+                        <div class="col col-8" data-label="Cost">₱ ${item.cost.toFixed(2)}</div>
                     `;
                     historyList.appendChild(li);
                 });

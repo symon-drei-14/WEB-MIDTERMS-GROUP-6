@@ -200,3 +200,7 @@ button {
     border-color: rgb(255,255,255, 0.9);
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
+
+.ongoing-trips {
+    line-height: 40px;
+}

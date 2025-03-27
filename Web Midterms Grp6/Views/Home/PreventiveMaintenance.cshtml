@@ -9,7 +9,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
 
-   
+
     <link href="/css/prevmain.css" rel="stylesheet" type="text/css" />
     <link href="/css/nav.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -92,7 +92,7 @@
                 <br />
                 <ul class="responsive-table" id="maintenanceTable">
                     <li class="table-header">
-                        <div class="col col-1"> Maintenance <br/> ID</div>
+                        <div class="col col-1"> Maintenance <br /> ID</div>
                         <div class="col col-2"> Truck ID</div>
                         <div class="col col-3"> License Plate</div>
                         <div class="col col-4"> Date of <br /> Inspection</div>
@@ -106,7 +106,7 @@
                     {
                         @foreach (var item in Model)
                         {
-                            <li class="table-row" data-maintenance-id="@item.MaintenanceId"> <div class="col col-1" data-label="Maintenance ID">@item.MaintenanceId</div> <div class="col col-2" data-label="Truck ID">@item.TruckId</div> <div class="col col-3" data-label="License Plate">@item.LicensePlate</div> <div class="col col-4" data-label="Date of Inspection">@item.DateOfInspection.ToString("yyyy-MM-dd")</div> <div class="col col-5" data-label="Remarks">@item.Remarks</div> <div class="col col-6" data-label="Status">@item.Status</div> <div class="col col-7" data-label="Supplier">@item.Supplier</div> <div class="col col-8" data-label="Cost">Php@(item.Cost)</div> <div class="col col-9" data-label="Actions"> <button class="btn btn-edit" onclick="editRecord(@item.MaintenanceId)">Edit</button> <button class="btn btn-delete" onclick="deleteRecord(@item.MaintenanceId)">Delete</button> </div> </li>
+                            <li class="table-row" data-maintenance-id="@item.MaintenanceId"> <div class="col col-1" data-label="Maintenance ID">@item.MaintenanceId</div> <div class="col col-2" data-label="Truck ID">@item.TruckId</div> <div class="col col-3" data-label="License Plate">@item.LicensePlate</div> <div class="col col-4" data-label="Date of Inspection">@item.DateOfInspection.ToString("yyyy-MM-dd")</div> <div class="col col-5" data-label="Remarks">@item.Remarks</div> <div class="col col-6" data-label="Status">@item.Status</div> <div class="col col-7" data-label="Supplier">@item.Supplier</div> <div class="col col-8" data-label="Cost">₱ @(item.Cost)</div> <div class="col col-9" data-label="Actions"> <button class="btn btn-edit" onclick="editRecord(@item.MaintenanceId)">Edit</button> <br> <button class="btn btn-delete" onclick="deleteRecord(@item.MaintenanceId)">Delete</button> </div> </li>
                         }
                     }
 
@@ -166,77 +166,77 @@
             </div>
         </div>
 
-    <!-- Add Modal -->
-    <div id="addModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Add Maintenance Record</h3>
+        <!-- Add Modal -->
+        <div id="addModal" class="modal">
+            <div class="modal-content2">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Add Maintenance Record </h3>
 
-            <div class="form-group">
-                <label for="maintenanceId">Maintenance ID:</label>
-                <input type="text" id="maintenanceId" value="@ViewBag.NextId" readonly>
-            </div>
-            <div class="form-group">
-                <label for="truckId">Truck ID:</label>
-                <input type="text" id="truckId" value="T-">
-            </div>
-            <div class="form-group">
-                <label for="licensePlate">License Plate:</label>
-                <input type="text" id="licensePlate">
-            </div>
-            <div class="form-group">
-                <label for="dateOfInspection">Date of Inspection:</label>
-                <input type="date" id="dateOfInspection">
-            </div>
-            <div class="form-group">
-                <label for="remarks">Remarks:</label>
-                <input type="text" id="remarks">
-            </div>
-            <div class="form-group">
-                <label for="status">Status:</label>
-                <input type="text" id="status">
-            </div>
-            <div class="form-group">
-                <label for="supplier">Supplier:</label>
-                <input type="text" id="supplier">
-            </div>
-            <div class="form-group">
-                <label for="cost">Cost:</label>
-                <input type="number" id="cost">
-            </div>
+                <div class="form-group">
+                    <label for="maintenanceId">Maintenance ID:</label>
+                    <input type="text" id="maintenanceId" value="@ViewBag.NextId" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="truckId">Truck ID:</label>
+                    <input type="text" id="truckId" value="T-">
+                </div>
+                <div class="form-group">
+                    <label for="licensePlate">License Plate:</label>
+                    <input type="text" id="licensePlate">
+                </div>
+                <div class="form-group">
+                    <label for="dateOfInspection">Date of Inspection:</label>
+                    <input type="date" id="dateOfInspection">
+                </div>
+                <div class="form-group">
+                    <label for="remarks">Remarks:</label>
+                    <input type="text" id="remarks">
+                </div>
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <input type="text" id="status">
+                </div>
+                <div class="form-group">
+                    <label for="supplier">Supplier:</label>
+                    <input type="text" id="supplier">
+                </div>
+                <div class="form-group">
+                    <label for="cost">Cost:</label>
+                    <input type="number" id="cost">
+                </div>
 
-            <div class="button-container">
-                <button class="btn btn-primary" onclick="submitForm()">Submit</button>
-                <button class="btn btn-danger" onclick="closeModal()">Cancel</button>
+                <div class="button-container">
+                    <button class="btn btn-primary" onclick="submitForm()">Submit</button>
+                    <button class="btn btn-danger" onclick="closeModal()">Cancel</button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- History Modal -->
-    <div id="historyModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeHistoryModal()">&times;</span>
-            <h3>Maintenance History</h3>
-            <label for="historyTruckId">Select Truck ID:</label>
-            <select id="historyTruckId" onchange="showHistory()">
-                <option value="">-- Select --</option>
-                @foreach (var truckId in ViewBag.TruckIds)
-                {
-                    <option value="@truckId">@truckId</option>
-                }
-            </select>
-            <ul id="historyList" class="responsive-table"></ul>
+        <!-- History Modal -->
+        <div id="historyModal" class="modal2">
+            <div class="modal-content3">
+                <span class="close" onclick="closeHistoryModal()">&times;</span>
+                <h3>Maintenance History</h3>
+                <label for="historyTruckId">Select Truck ID:</label>
+                <select id="historyTruckId" onchange="showHistory()">
+                    <option value="">-- Select --</option>
+                    @foreach (var truckId in ViewBag.TruckIds)
+                    {
+                        <option value="@truckId">@truckId</option>
+                    }
+                </select>
+                <div id="historyList" class="responsive-table2"></div>
+            </div>
         </div>
-    </div>
 
-    <!-- Reminder Modal -->
-    <div id="reminderModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeReminderModal()">&times;</span>
-            <h3>Upcoming Maintenance Reminders</h3>
-            <ul id="reminderList" class="responsive-table"></ul>
+        <!-- Reminder Modal -->
+        <div id="reminderModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeReminderModal()">&times;</span>
+                <h3>Upcoming Maintenance Reminders</h3>
+                <ul id="reminderList" class="responsive-table"></ul>
+            </div>
         </div>
-    </div>
     </div>
 
     @section Scripts {
@@ -249,7 +249,7 @@
                 }
             });
         </script>
-    
+
 
     }
 </body>

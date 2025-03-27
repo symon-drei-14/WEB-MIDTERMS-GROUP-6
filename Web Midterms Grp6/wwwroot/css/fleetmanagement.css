@@ -5,38 +5,6 @@
     background-color: #e9ecef;
     color: #343a40;
 }
-/*
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-    header .logo {
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-    nav ul li {
-        display: inline;
-        padding: 10px;
-    }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }*/
 
 .dashboard, section {
     margin: 20px;
@@ -77,7 +45,7 @@ table {
     }
 
     table th {
-        background-color: #51af24;
+        background-color: #3675ac;
         color: white;
     }
 
@@ -179,7 +147,7 @@ button {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000s;
     left: 0;
     top: 0;
     width: 100%;

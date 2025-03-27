@@ -17,18 +17,20 @@
         display: inline-block;
     }
 
-/* Button styling */
+
 .btn-success {
     background-color: #28a745;
     color: white;
     padding: 5px 8px;
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: bold;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
     margin-bottom: 15px;
     display: inline-block;
-    width: auto; /* Allow it to fit its content */
+    width: 10em;
+    height: 3em;
 }
 
     .btn-success:hover {
@@ -43,24 +45,27 @@
     list-style-type: none;
     padding: 0;
 }
+
 .button-wrapper {
     display: flex;
-    justify-content: flex-start; /* Align left */
+    justify-content: flex-start;
 }
 
-/* Table header */
+
 .table-header {
-    background-color: #70b2ff;
-    padding: 8px 5px;
-    height: 40px; /* Reduced from 50px */
-    font-size: 12px;
-    text-transform: uppercase;
+    background-color: #3675ac;
+    color: #eaeef1;
+    padding: 8px 10px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
     letter-spacing: 0.03em;
     display: flex;
     border-radius: 5px;
     width: 100%;
     margin-bottom: 10px;
     justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Table row */
@@ -71,61 +76,61 @@
     margin-bottom: 10px;
     border-radius: 3px;
     justify-content: center;
+    font-size: 20px;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
     padding: 5px;
-    font-size: 12px;
+    font-size: 15px;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    text-overflow: clip;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-align: center;
 }
 
-/* Adjust column widths based on content needs */
 .col-1 {
     flex: 0.6;
 }
-/* Date - make smaller */
+
 .col-2 {
     flex: 0.8;
 }
-/* Driver */
+
 .col-3 {
     flex: 0.9;
 }
-/* Broker/Client */
+
 .col-4 {
     flex: 0.9;
 }
-/* Destination */
+
 .col-5 {
     flex: 0.8;
 }
-/* Container No. */
+
 .col-6 {
     flex: 0.8;
 }
-/* BL REF NO. */
+
 .col-7 {
     flex: 0.6;
 }
-/* Status - make smaller */
+
 .col-8 {
     flex: 0.8;
 }
-/* Cash Advance */
+
 .col-9 {
     flex: 0.8;
 }
-/* Additional Cash Advance */
+
 .col-10 {
     flex: 0.8;
 }
-/* Total Amount */
-.col-11 {
-    flex: 0.8;
-}
-/* Actions */
+
+
 
 .col {
     position: relative;
@@ -174,10 +179,13 @@
         }
 }
 
-/* Action buttons container */
+
 .col-11 {
+    flex: 0.8;
+    flex-direction: column;
     display: flex;
     justify-content: center;
+    align-content: center;
     gap: 10px;
 }
 
@@ -185,7 +193,7 @@
         display: inline-block;
     }
 
-/* Other styles remain unchanged */
+
 .modal {
     display: none;
     position: fixed;
@@ -203,9 +211,9 @@
     margin: 10% auto;
     padding: 20px;
     border-radius: 5px;
+    height: 115vh;
     width: 50%;
-    max-height: 80vh;
-    overflow-y: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .close {
@@ -225,15 +233,16 @@
     }
 
     .form-group input {
-        width: 100%;
+        width: 95%;
         padding: 8px;
         margin-top: 5px;
+        font-size: 15px;
     }
 
 .button-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .btn {
@@ -241,12 +250,14 @@
     font-size: 12px;
     border: none;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .btn-primary {
     background-color: #28a745;
     color: white;
+    height: 40px;
+    font-size: 14px;
 }
 
     .btn-primary:hover {
@@ -256,11 +267,16 @@
 .btn-danger {
     background-color: #e74c3c;
     color: white;
+    height: 30px;
+    font-size: 14px;
+    width: 100%;
 }
 
 .btn-warning {
-    background-color: #f39c12;
+    background-color: forestgreen;
     color: white;
+    height: 30px;
+    font-size: 14px;
 }
 
 .btn-first {
@@ -306,7 +322,23 @@
 
 .col.col-8.actions {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.cancelbtn {
+    width: 70px;
+    height: 40px;
+    background-color: #ec3f3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-info {
+    background-color: forestgreen;
+    color: azure;
+    font-size: 14px;
 }

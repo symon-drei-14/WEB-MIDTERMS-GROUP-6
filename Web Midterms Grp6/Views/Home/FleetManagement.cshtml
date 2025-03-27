@@ -254,24 +254,32 @@
         </div>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+                document.addEventListener("DOMContentLoaded", function() {
+
+            const minDate = "2025-03-28T00:00";
+
+
+            document.getElementById('departure-time').setAttribute('min', minDate);
+            document.getElementById('arrival-time').setAttribute('min', minDate);
+
             const counters = document.querySelectorAll('.count');
             counters.forEach(counter => {
                 const updateCount = () => {
-                    const target = +counter.innerText; // Get the target number
-                    const count = +counter.innerText; // Get the current count
-                    const increment = target / 200; // Increment value
+                    const target = +counter.innerText;
+                    const count = +counter.innerText;
+                    const increment = target / 200;
 
                     if (count < target) {
                         counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 1); // Call the function again
+                        setTimeout(updateCount, 1);
                     } else {
-                        counter.innerText = target; // Ensure it ends at the target
+                        counter.innerText = target;
                     }
                 };
                 updateCount();
             });
         });
+
     </script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
