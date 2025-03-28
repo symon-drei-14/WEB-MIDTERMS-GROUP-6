@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nyplk6jlvz</Fingerprint>
-      <Integrity>r1LEzZv9WEI8FgTR26oaGjFAGCIHExlF5JnoLXzi6xM=</Integrity>
+      <Fingerprint>t5iiytm7wj</Fingerprint>
+      <Integrity>j73r116tZ6Pcz54zFTVMIZ2LpVTQq8hCx77k8yAfly8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\nav.css'))</OriginalItemSpec>

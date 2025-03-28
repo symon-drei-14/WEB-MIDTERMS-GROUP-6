@@ -72,7 +72,6 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\bf6zztx0b0-klplyr7siv.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\31sm8zss4c-f39be8twlb.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\9cnst5ewa8-6e7pvnkuix.gz
-C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\c341250vmh-nyplk6jlvz.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\j3jbt6un5j-ji1ltsqaoj.gz
 C:\Users\Glen\Documents\GitHub\WEB-MIDTERMS-GROUP-6\Web Midterms Grp6\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Glen\Documents\GitHub\WEB-MIDTERMS-GROUP-6\Web Midterms Grp6\bin\Debug\net9.0\appsettings.json
@@ -220,3 +219,4 @@ C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\ic6pt7bx2l-nkhyvumwim.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\etugh3gxde-obbb1tfj7k.gz
 C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\2gmwr11r1u-mgkwb3ra35.gz
+C:\Users\symon\source\repos\Web Midterms Grp6\Web Midterms Grp6\obj\Debug\net9.0\compressed\c341250vmh-t5iiytm7wj.gz

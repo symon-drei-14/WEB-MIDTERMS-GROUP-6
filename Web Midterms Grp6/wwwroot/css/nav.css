@@ -115,6 +115,13 @@
 .icon {
     margin-right: 10px;
     color: black !important;
+    filter: grayscale(30%) brightness(20%);
+}
+
+.icon2 {
+    margin-right: 10px;
+    color: black !important;
+    filter: grayscale(30%) brightness(35%);
 }
 
 .sidebar-item span {
