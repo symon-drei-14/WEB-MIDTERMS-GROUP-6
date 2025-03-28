@@ -246,8 +246,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ji1ltsqaoj</Fingerprint>
-      <Integrity>FbjFFwT0Gs+o/E2nEsiwM3BW4P+yDFsjrnpYWiR9YbE=</Integrity>
+      <Fingerprint>riqbo9hz1u</Fingerprint>
+      <Integrity>Awe7PVMyvwhJ5KK7tn5/sMe+LB08kLNputSp6Yd3ijc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\fleetmanagement.js'))</OriginalItemSpec>
@@ -300,8 +300,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>obbb1tfj7k</Fingerprint>
-      <Integrity>7Axy6SAYOPWTqYLjfwqTUUf7wkJ9bL+vQd1f8VOTGEo=</Integrity>
+      <Fingerprint>xudx9by0i9</Fingerprint>
+      <Integrity>l2YGUB0fs/ab6OVM7iIeHv4llbramdbjl0JqmsYnKio=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\prevmain.js'))</OriginalItemSpec>

@@ -13,6 +13,26 @@ function closeModal() {
     clearFields();
 }
 
+function setMinDate() {
+    // Get today's date in YYYY-MM-DD format
+    const today = new Date().toISOString().split('T')[0];
+
+    // Set min date for date of inspection in add modal
+    const addDateInput = document.getElementById('dateOfInspection');
+    if (addDateInput) {
+        addDateInput.min = today;
+    }
+
+    // Set min date for date of inspection in edit modal
+    const editDateInput = document.getElementById('editDateOfInspection');
+    if (editDateInput) {
+        editDateInput.min = today;
+    }
+}
+
+// Call this function when the page loads
+document.addEventListener('DOMContentLoaded', setMinDate);
+
 function submitForm() {
     let maintenanceId = parseInt(document.getElementById("maintenanceId").value.trim());
     let truckId = document.getElementById("truckId").value.trim();
@@ -261,8 +281,8 @@ function editRecord(maintenanceId) {
     document.getElementById("editStatus").value = row.querySelector('.col-6').textContent;
     document.getElementById("editSupplier").value = row.querySelector('.col-7').textContent;
 
-    // Remove "Php" from cost
-    const cost = row.querySelector('.col-8').textContent.replace('Php', '');
+
+    const cost = row.querySelector('.col-8').textContent.replace('₱', '').trim();
     document.getElementById("editCost").value = cost;
 
     // Show edit modal
