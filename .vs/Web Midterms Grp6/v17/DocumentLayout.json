@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
               "ToolTip": "C:\\Users\\symon\\source\\repos\\Web Midterms Grp6\\Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
               "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\LandingPage.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEQAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-28T09:07:43.382Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\TripLogs.cshtml",
               "ViewState": "AgIAAC4AAAAAAAAAAAAAAE0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T09:07:16.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T09:07:16.132Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\FleetManagement.cshtml",
               "ViewState": "AgIAACcAAAAAAAAAAAAAACkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T09:05:48.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T09:05:48.641Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Web Midterms Grp6\\wwwroot\\css\\nav.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-28T09:05:42.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T09:05:42.384Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Web Midterms Grp6\\Views\\Home\\PreventiveMaintenance.cshtml",
               "ViewState": "AgIAAD0AAAAAAAAAAAAowEoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T14:12:16.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T14:12:16.786Z"
             }
           ]
         }
