@@ -11,7 +11,10 @@ body {
     background-color: #f7faf7;
 }
 
-
+h3.bottom {
+/*    margin-top:30px;*/
+    margin-bottom:30px;
+}
 
 .profile {
     display: flex;
@@ -38,6 +41,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 30%;
+    margin-bottom:10px;
     transition: transform 0.2s;
 }
 
@@ -204,3 +208,52 @@ button {
 .ongoing-trips {
     line-height: 40px;
 }
+
+
+.urgent-maintenance {
+    border: 3px solid #ff4444;
+    background-color: #fff5f5;
+    padding: 15px;
+    animation: border-pulse 1.5s infinite;
+}
+
+.urgent-title {
+    color: #ff4444;
+    text-transform: uppercase;
+    font-weight: bold;
+/*    text-align: center;*/
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff4444;
+    padding-bottom: 10px;
+}
+
+.urgent-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .urgent-table thead {
+        background-color: #ff4444;
+        color: white;
+    }
+
+    .urgent-table th, .urgent-table td {
+        padding: 10px;
+        border: 1px solid #ffaaaa;
+    }
+
+.urgent-row {
+    background-color: #ffdddd;
+    animation: row-pulse 1.5s infinite;
+}
+
+.status-urgent {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.date-overdue {
+    color: #cc0000;
+    font-weight: bold;
+}
+
